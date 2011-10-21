@@ -3,6 +3,12 @@ RunHub::Application.routes.draw do
 
   root :to => "workouts#index"
   
+  resources :workouts do
+    member do
+      get 'index'
+    end
+  end
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
