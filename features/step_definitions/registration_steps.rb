@@ -3,7 +3,9 @@ And /^I am not yet registered$/ do
 end
 
 When /^I register to become a member$/ do
-  pending 
+  fill_in("user_email", :with => "acceptance-test-user")
+  fill_in("user_password", :with => "long_password")
+  fill_in("user_password_confirmation", :with => "long_password")
 end
 
 Then /^I am taken to my workouts page$/ do
