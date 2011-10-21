@@ -8,6 +8,6 @@ class User < ActiveRecord::Base
   attr_accessible :email, :password, :password_confirmation, :remember_me
 
   def self.username_exists? username
-    false
+    return (not User.find_by_username(username).nil?)
   end
 end
