@@ -85,6 +85,7 @@ GEM
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
     mime-types (1.16)
+    minitest (2.6.1)
     multi_json (1.0.3)
     nokogiri (1.5.0)
     polyglot (0.3.2)
@@ -177,6 +178,7 @@ DEPENDENCIES
   cucumber-rails
   database_cleaner
   jquery-rails
+  minitest
   rails (= 3.1.0)
   rspec-rails
   sass-rails (~> 3.1.0)

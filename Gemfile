@@ -30,6 +30,7 @@ gem 'jquery-rails'
 group :development, :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'minitest'
 
   gem "rspec-rails"
   gem "autotest"
