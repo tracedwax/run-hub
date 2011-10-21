@@ -1,5 +1,5 @@
 Given /^that I am not yet registered$/ do
-  pending # express the regexp above with the code you wish you had
+  User.username_exists?("acceptance-test-user").should == false
 end
 
 When /^I register to become a member$/ do
