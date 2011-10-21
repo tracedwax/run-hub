@@ -37,4 +37,8 @@ group :development, :test do
 
   gem "ZenTest"
   gem "webrat"
+
+  gem 'cucumber-rails'
+  gem 'capybara'
+  gem 'database_cleaner'
 end
