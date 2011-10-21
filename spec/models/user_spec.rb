@@ -2,8 +2,8 @@ require 'spec_helper'
 
 Factory.define :user do |factory|
   factory.username "rspec-registered-user"
-  factory.email "rspec@testing.net"
   factory.password "rspec_lots_of_chars"
+  factory.email "rspec@testing.net"
 end
 
 describe User do
