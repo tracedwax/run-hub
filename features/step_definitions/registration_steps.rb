@@ -6,6 +6,8 @@ When /^I register to become a member$/ do
   fill_in("user_email", :with => "acceptance-test-user")
   fill_in("user_password", :with => "long_password")
   fill_in("user_password_confirmation", :with => "long_password")
+
+  click_button("Sign up")
 end
 
 Then /^I am taken to my workouts page$/ do
