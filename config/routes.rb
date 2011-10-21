@@ -3,7 +3,7 @@ RunHub::Application.routes.draw do
 
   root :to => "workouts#index"
   
-  resources :workouts do
+  resources :workouts, :only => [:index] do
     member do
       get 'index'
     end
