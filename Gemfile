@@ -18,6 +18,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'devise'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -32,12 +34,12 @@ group :development, :test do
   gem 'turn', :require => false
   gem 'minitest'
 
-  gem "rspec-rails"
-  gem "autotest"
-  gem "autotest-rails"
+  gem 'rspec-rails'
+  gem 'autotest'
+  gem 'autotest-rails'
 
-  gem "ZenTest"
-  gem "webrat"
+  gem 'ZenTest'
+  gem 'webrat'
 
   gem 'cucumber-rails'
   gem 'capybara'
