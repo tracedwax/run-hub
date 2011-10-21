@@ -1,9 +1,9 @@
-Given /^that I am not yet registered$/ do
+And /^I am not yet registered$/ do
   User.username_exists?("acceptance-test-user").should == false
 end
 
 When /^I register to become a member$/ do
-  pending # express the regexp above with the code you wish you had
+  pending 
 end
 
 Then /^I am taken to my workouts page$/ do
