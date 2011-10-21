@@ -7,5 +7,5 @@ Feature: Register for RunHub
     Given I am on the sign up page
     And I am not yet registered
     When I register to become a member
-    Then I am taken to my workouts page
+    Then I should be on my workouts page
     And I should see a message related to my registration success
