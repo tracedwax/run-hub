@@ -9,3 +9,11 @@ When /^I log in to Runhub$/ do
   click_button("Sign in")
 end
 
+When /^I log in to RunHub with incorrect credentials$/ do
+  When "I log in to Runhub"
+end
+
+Then /^I see a login error message$/ do
+  page.should have_content("Invalid email or password")
+end
+
