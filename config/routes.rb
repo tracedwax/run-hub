@@ -1,12 +1,8 @@
 RunHub::Application.routes.draw do
   devise_for :users
 
-  resources :workouts, :only => [:index] do
-    member do
-      get 'index'
-    end
-  end
-  
+  match 'workouts' => 'workouts#index'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
