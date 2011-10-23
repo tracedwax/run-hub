@@ -10,7 +10,7 @@ When /^I register to become a member$/ do
   click_button("Sign up")
 end
 
-Then /^I should see a message related to my registration success$/ do
-  pending # express the regexp above with the code you wish you had
+And /^I should see a message related to my login success$/ do
+  page.should have_content("Listing all workouts")
 end
 

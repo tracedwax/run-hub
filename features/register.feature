@@ -8,4 +8,4 @@ Feature: Register for RunHub
     And I am not yet registered
     When I register to become a member
     Then I should be on my workouts page
-    Then I should see "Listing all workouts"
+    And I should see a message related to my login success
