@@ -13,6 +13,8 @@ module NavigationHelpers
       '/'
     when /^the sign up\s?page$/
       '/users/sign_up'
+    when /^the sign in\s? page$/
+      '/users/sign_in'
     when /^my workouts\s?page$/
       '/workouts'
 
