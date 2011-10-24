@@ -27,3 +27,7 @@ div.dialog-header {
   color: #FFF;
   width: auto;
 }
+
+img.logo {
+  margin: 10px 0px 0px 125px;
+}
