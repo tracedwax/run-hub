@@ -28,6 +28,11 @@ div.dialog-header {
   width: auto;
 }
 
+nav.main-bar {
+  background-color: whiteSmoke;
+  border-bottom: 1px solid #E5E5E5;
+}
+
 img.logo {
-  margin: 10px 0px 0px 125px;
+  margin: 10px 0px 10px 125px;
 }
