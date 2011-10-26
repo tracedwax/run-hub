@@ -1,5 +1,6 @@
 html {
   background-color: #E4FDFF;
+  font: 81.25% arial, helvetica, sans-serif;
 }
 
 div.login-wrapper {
@@ -35,4 +36,27 @@ nav.main-bar {
 
 img.logo {
   margin: 10px 0px 10px 125px;
+}
+
+span.account-state {
+  float: right;
+  text-align: center;
+  min-width: 54px;
+  font-size: 11px;
+  font-weight: bold;
+  display: inline-block;
+  height: 30px;
+  background-color: #D14836;
+  color: #FFF;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  text-transform: uppercase;
+
+  padding: 0 8px;
+  line-height: 27px;
+  margin: 15px 175px;
 }
