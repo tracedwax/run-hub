@@ -10,21 +10,20 @@ html {
 div.run-hub-heading {
   padding-left: 57px;
   color: #FFF;
-
   
-background-image: linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-background-image: -o-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-background-image: -moz-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-background-image: -webkit-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-background-image: -ms-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.32, rgb(34,22,138)),
-	color-stop(0.66, rgb(57,49,135))
-);
+  background-image: linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
+  background-image: -o-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
+  background-image: -moz-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
+  background-image: -webkit-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
+  background-image: -ms-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
+  
+  background-image: -webkit-gradient(
+	  linear,
+	  left bottom,
+	  left top,
+	  color-stop(0.32, rgb(34,22,138)),
+	  color-stop(0.66, rgb(57,49,135))
+  );
 }
 
 div.preview-point {
