@@ -10,9 +10,9 @@ html {
   -moz-border-radius: 15px;
   border-radius: 15px;
   
-  -moz-box-shadow: 10px 10px 5px #888;
-  -webkit-box-shadow: 10px 10px 5px #888;
-  box-shadow: 10px 10px 5px #888;
+  -moz-box-shadow: 1px 1px 1px #888;
+  -webkit-box-shadow: 5px 5px 5px #888;
+  box-shadow: 1px 5px 15px 1px #888;
   
   padding: 25px 50px 25px 50px;
    
