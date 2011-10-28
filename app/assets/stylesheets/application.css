@@ -10,7 +10,8 @@ html {
 div.run-hub-heading {
   font-family: "Courier New", Courier, monospace;
   font-size: 45px;
-  text-align: center;
+  padding-left: 52px;
+  background-color: #9F5050;
 }
 
 div.preview-point {
