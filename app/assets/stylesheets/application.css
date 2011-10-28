@@ -3,6 +3,17 @@ html {
   font: 81.25% arial, helvetica, sans-serif;
 }
 
+div.run-hub-heading {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 45px;
+  text-align: center;
+}
+
+div.preview-point {
+  background-color: #DEF;
+  margin-top: 15px;
+}
+
 #main-content {
   margin-top: 100px;
   background-color: #FFF;
