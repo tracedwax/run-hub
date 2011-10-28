@@ -1,17 +1,10 @@
 html {
-  background-color: #E4FDFF;
+  background-color: #FFF;
   font: 81.25% arial, helvetica, sans-serif;
 }
 
-div.login-wrapper {
-  padding: 25px 100px 25px 100px;
-}
-
 #main-content {
-  position: absolute;
-  left: 45%;
-  top: 50%;
-  margin:-200px 0 0 -150px;
+  margin-top: 100px;
   background-color: #FFF;
   
   -moz-border-radius: 15px;
@@ -20,6 +13,11 @@ div.login-wrapper {
   -moz-box-shadow: 10px 10px 5px #888;
   -webkit-box-shadow: 10px 10px 5px #888;
   box-shadow: 10px 10px 5px #888;
+  
+  padding: 25px 50px 25px 50px;
+   
+  max-width: 800px;
+  margin: 50px auto;
 }
 
 div.dialog-header {
@@ -30,7 +28,7 @@ div.dialog-header {
 }
 
 nav.main-bar {
-  background-color: whiteSmoke;
+  background-color: #F5F5F5;
   border-bottom: 1px solid #E5E5E5;
 }
 
@@ -59,4 +57,20 @@ span.account-state {
   padding: 0 8px;
   line-height: 27px;
   margin: 15px 175px;
+}
+
+#sign-up-flexbox {
+  display: -webkit-box; display: -moz-box; display: box;
+}
+
+div#run-hub-preview {
+  -webkit-box-flex: 1; -moz-box-flex: 1; box-flex: 1;
+  background-color: #ABC;
+}
+
+div#sign-in-container {
+  -webkit-box-flex: 1.5; -moz-box-flex: 1.5; box-flex: 1.5;
+  margin-left: 50px;
+  background-color: #F5F5F5;
+  padding: 0px 15px 15px 15px;
 }
