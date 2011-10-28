@@ -3,6 +3,10 @@ html {
   font: 81.25% arial, helvetica, sans-serif;
 }
 
+.flexbox {
+  display: -webkit-box; display: -moz-box; display: box;
+}
+
 div.run-hub-heading {
   font-family: "Courier New", Courier, monospace;
   font-size: 45px;
@@ -13,6 +17,14 @@ div.preview-point {
   background-color: #DEF;
   margin-top: 15px;
   padding-left: 20px;
+}
+
+div.preview-point img {
+  margin-top: 5px;
+}
+
+div.preview-point .point {
+  margin-left: 20px;
 }
 
 div.preview-point .heading {
