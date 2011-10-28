@@ -1,5 +1,5 @@
 html {
-  background-color: #FFF;
+  background-color: #FAFAFA;
   font: 81.25% arial, helvetica, sans-serif;
 }
 
@@ -14,7 +14,6 @@ div.run-hub-heading {
 }
 
 div.preview-point {
-  background-color: #DEF;
   margin-top: 15px;
   padding-left: 20px;
 }
@@ -97,12 +96,12 @@ span.account-state {
 
 div#run-hub-preview {
   -webkit-box-flex: 1; -moz-box-flex: 1; box-flex: 1;
-  background-color: #ABC;
+  background-color: #E5E5E5;
 }
 
 div#sign-in-container {
   -webkit-box-flex: 1.5; -moz-box-flex: 1.5; box-flex: 1.5;
   margin-left: 50px;
-  background-color: #F5F5F5;
+  background-color: #E5E5E5;
   padding: 0px 15px 15px 15px;
 }
