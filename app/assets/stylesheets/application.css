@@ -13,10 +13,8 @@ div.run-hub-heading {
 }
 
 div.dialog-header {
-  background-color: #1D0078;
+  background-color: #B8B8B8;
   text-align: center;
-  color: #FFF;
-  text-shadow: 2px 2px #000;
   
   width: auto;
   font-size: 20px;
@@ -25,28 +23,15 @@ div.dialog-header {
   padding-top: 10px;
   padding-left: 20px;
   text-align: left;
-    
-background-image: linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
-background-image: -o-linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
-background-image: -moz-linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
-background-image: -webkit-linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
-background-image: -ms-linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
-
-background-image: -webkit-gradient(
- linear,
- left bottom,
- left top,
- color-stop(0, rgb(66,67,97)),
- color-stop(0.5, rgb(160,147,191))
-);
 
   
-    -moz-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
 
 nav.main-bar {
   border-bottom: 1px solid #E5E5E5;
+  background-color: #F5F5F5;
 }
 
 img.logo {
@@ -76,7 +61,7 @@ div#sign-in-container a:hover {
 section.sign-in-section {
     padding: 8px 15px 15px 15px;
     font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
-    background-color: #adade3;
+    background-color: #F5F5F5;
     
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
