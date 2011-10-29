@@ -26,27 +26,13 @@ div.run-hub-heading {
   );
 }
 
-#main-content {
-  margin-top: 100px;
-  background-color: #FFF;
-  
-
-  
-  padding: 25px 50px 25px 50px;
-   
-  width: 350px;
-  margin: 50px auto;
-}
-
 div.dialog-header {
   background-color: #1D0078;
   text-align: center;
   color: #FFF;
   width: auto;
   font-size: 20px;
-  
-  -moz-border-radius: 15px 15px 0 0;
-  border-radius: 15px 15px 0 0;
+  margin-top: -25px;
 }
 
 nav.main-bar {
@@ -58,16 +44,35 @@ img.logo {
 }
 
 div#sign-in-container {
-  background-color: #E5E5E5;
   width: 350px;
   margin: 100px auto;
+  border: 2px solid #1D0078;
+  color: #FFF;
   
-  -moz-border-radius: 15px;
-  border-radius: 15px;
   
-  -moz-box-shadow: 1px 1px 1px #888;
-  -webkit-box-shadow: 5px 5px 5px #888;
-  box-shadow: 1px 5px 15px 1px #888;
+background-image: linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
+background-image: -o-linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
+background-image: -moz-linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
+background-image: -webkit-linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
+background-image: -ms-linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.11, rgb(107,131,184)),
+	color-stop(0.56, rgb(84,115,186))
+);
+}
+
+div#sign-in-container a {
+  color: #0f2452;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+div#sign-in-container a:hover {
+  text-decoration: underline;
 }
 
 section.sign-in-section {
