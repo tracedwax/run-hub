@@ -56,7 +56,10 @@ img.logo {
 div#sign-in-container {
   width: 350px;
   margin: 50px auto;
-  /* border: 2px solid #1D0078; */
+  border: 1px solid #d4d4db;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+  
   color: #000;
 }
 
