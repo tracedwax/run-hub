@@ -1,54 +1,15 @@
-<div id="sign-up-flexbox">
-    <div id="run-hub-preview">
-        <div class="run-hub-heading">
-            <h1>runhub</h1>
-        </div>
-        
-        <div class="preview-point flexbox">
-            <%= image_tag "checkmark.png" %>
-            
-            <div class="point">
-                <div class="heading">Dead Easy</div>
-                <div class="description">
-                    Straightforward features that are easy to use.
-                </div>
-            </div>
-        </div>
-        
-        <div class="preview-point flexbox">
-            <%= image_tag "checkmark.png" %>
-            
-            <div class="point">
-                <div class="heading">Free</div>
-                <div class="description">
-                    Full access to all features, completely free.
-                </div>
-            </div>
-        </div>
-        
-        <div class="preview-point flexbox">
-            <%= image_tag "checkmark.png" %>
-            
-            <div class="point">
-                <div class="heading">Ad Free</div>
-                <div class="description">
-                    Never get distracted by a single ad.
-                </div>
-                </div>
-            </div>
-        </div>
+<div id="sign-in-container">
+    <div class="dialog-header">
+      <h2>Sign in</h2>
+    </div>
 
-    <div id="sign-in-container">
-        <div class="dialog-header">
-          <h2>Sign in</h2>
-        </div>
-
+    <section class="sign-in-section">
         <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
           <div><%= f.label :email %><br />
-          <%= f.email_field :email %></div>
+          <%= f.email_field :email, :class => "big-input" %></div>
           
           <div><%= f.label :password %><br />
-          <%= f.password_field :password %></div>
+          <%= f.password_field :password, :class => "big-input" %></div>
 
           <% if devise_mapping.rememberable? -%>
             <div><%= f.check_box :remember_me %> <%= f.label :remember_me %></div>

@@ -26,41 +26,15 @@ div.run-hub-heading {
   );
 }
 
-div.preview-point {
-  margin-top: 15px;
-  padding-left: 20px;
-}
-
-div.preview-point img {
-  margin-top: 5px;
-}
-
-div.preview-point .point {
-  margin-left: 20px;
-}
-
-div.preview-point .heading {
-  font-size: 16px;
-}
-
-div.preview-point .description {
-  font-size: 12px;
-}
-
 #main-content {
   margin-top: 100px;
   background-color: #FFF;
   
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  
-  -moz-box-shadow: 1px 1px 1px #888;
-  -webkit-box-shadow: 5px 5px 5px #888;
-  box-shadow: 1px 5px 15px 1px #888;
+
   
   padding: 25px 50px 25px 50px;
    
-  max-width: 800px;
+  width: 350px;
   margin: 50px auto;
 }
 
@@ -69,10 +43,12 @@ div.dialog-header {
   text-align: center;
   color: #FFF;
   width: auto;
+  
+  -moz-border-radius: 15px 15px 0 0;
+  border-radius: 15px 15px 0 0;
 }
 
 nav.main-bar {
-  background-color: #F5F5F5;
   border-bottom: 1px solid #E5E5E5;
 }
 
@@ -80,41 +56,23 @@ img.logo {
   margin: 10px 0px 10px 125px;
 }
 
-span.account-state {
-  float: right;
-  text-align: center;
-  min-width: 54px;
-  font-size: 11px;
-  font-weight: bold;
-  display: inline-block;
-  height: 30px;
-  background-color: #D14836;
-  color: #FFF;
-  text-shadow: 0 1px rgba(0, 0, 0, 0.1);
-  border: 1px solid transparent;
-
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  text-transform: uppercase;
-
-  padding: 0 8px;
-  line-height: 27px;
-  margin: 15px 175px;
-}
-
-#sign-up-flexbox {
-  display: -webkit-box; display: -moz-box; display: box;
-}
-
-div#run-hub-preview {
-  -webkit-box-flex: 1; -moz-box-flex: 1; box-flex: 1;
-  background-color: #E5E5E5;
-}
-
 div#sign-in-container {
-  -webkit-box-flex: 1.5; -moz-box-flex: 1.5; box-flex: 1.5;
-  margin-left: 50px;
   background-color: #E5E5E5;
-  padding: 0px 15px 15px 15px;
+  width: 350px;
+  margin: 100px auto;
+  
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  
+  -moz-box-shadow: 1px 1px 1px #888;
+  -webkit-box-shadow: 5px 5px 5px #888;
+  box-shadow: 1px 5px 15px 1px #888;
+}
+
+section.sign-in-section {
+    padding: 0px 15px 15px 15px;
+}
+
+section.sign-in-section .big-input {
+  font-size: 18px;
 }
