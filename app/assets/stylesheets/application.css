@@ -1,5 +1,5 @@
 html {
-  background-color: #FAFAFA;
+  background-color: #FFF;
   font: 81.25% arial, helvetica, sans-serif;
 }
 
@@ -10,30 +10,39 @@ html {
 div.run-hub-heading {
   padding-left: 57px;
   color: #FFF;
-  
-  background-image: linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-  background-image: -o-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-  background-image: -moz-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-  background-image: -webkit-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-  background-image: -ms-linear-gradient(bottom, rgb(34,22,138) 32%, rgb(57,49,135) 66%);
-  
-  background-image: -webkit-gradient(
-	  linear,
-	  left bottom,
-	  left top,
-	  color-stop(0.32, rgb(34,22,138)),
-	  color-stop(0.66, rgb(57,49,135))
-  );
 }
 
 div.dialog-header {
   background-color: #1D0078;
   text-align: center;
   color: #FFF;
+  text-shadow: 2px 2px #000;
+  
   width: auto;
   font-size: 20px;
-  font-family: "Lucida Console", Monaco, monospace;
-  padding: 2px 0px 2px 0px;
+  font-family: Lucida Console, Monaco, monospace;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  padding-left: 20px;
+  text-align: left;
+    
+background-image: linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
+background-image: -o-linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
+background-image: -moz-linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
+background-image: -webkit-linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
+background-image: -ms-linear-gradient(bottom, rgb(66,67,97) 0%, rgb(160,147,191) 50%);
+
+background-image: -webkit-gradient(
+ linear,
+ left bottom,
+ left top,
+ color-stop(0, rgb(66,67,97)),
+ color-stop(0.5, rgb(160,147,191))
+);
+
+  
+    -moz-border-radius: 5px 5px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 nav.main-bar {
@@ -46,24 +55,9 @@ img.logo {
 
 div#sign-in-container {
   width: 350px;
-  margin: 100px auto;
-  border: 2px solid #1D0078;
-  color: #FFF;
-  
-  
-background-image: linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
-background-image: -o-linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
-background-image: -moz-linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
-background-image: -webkit-linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
-background-image: -ms-linear-gradient(bottom, rgb(107,131,184) 11%, rgb(84,115,186) 56%);
-
-background-image: -webkit-gradient(
-	linear,
-	left bottom,
-	left top,
-	color-stop(0.11, rgb(107,131,184)),
-	color-stop(0.56, rgb(84,115,186))
-);
+  margin: 50px auto;
+  /* border: 2px solid #1D0078; */
+  color: #000;
 }
 
 div#sign-in-container a {
@@ -77,8 +71,12 @@ div#sign-in-container a:hover {
 }
 
 section.sign-in-section {
-    padding: 0px 15px 15px 15px;
-    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    padding: 8px 15px 15px 15px;
+    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+    background-color: #adade3;
+    
+  -moz-border-radius: 0 0 5px 5px;
+  border-radius: 0 0 5px 5px;
 }
 
 section.sign-in-section .big-input {
