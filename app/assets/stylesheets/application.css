@@ -66,9 +66,13 @@ img.logo {
   margin: 10px 0px 10px 125px;
 }
 
+div#main-content {
+  margin: 200px auto;
+}
+
 div#sign-in-container {
   width: 350px;
-  margin: 200px auto;
+  margin: auto;
   border: 1px solid #d4d4db;
   -moz-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px;
