@@ -75,6 +75,31 @@ div#main-content {
 div#site-preview-container {
   -webkit-box-flex: 4; -moz-box-flex: 4; box-flex: 4;
    margin-right: 100px;
+   background-color: #F5F5F5;
+   font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+   
+  border: 1px solid #d4d4db;
+  -moz-border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px;
+}
+
+div.preview-point {
+  margin-top: 15px;
+}
+
+div.heading {
+  font-size: 16px;
+}
+
+div.description {
+  margin-left: 37px;
+}
+
+img {
+  float: left;
+  margin-right: 10px;
+  margin-left: 8px;
+  margin-top: 10px;
 }
 
 div#sign-in-container {
@@ -97,9 +122,9 @@ div#sign-in-container a:hover {
 }
 
 section.sign-in-section {
-    padding: 8px 15px 15px 15px;
-    font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
-    background-color: #F5F5F5;
+  padding: 8px 15px 15px 15px;
+  font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+  background-color: #F5F5F5;
     
   -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;

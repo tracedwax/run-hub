@@ -4,20 +4,33 @@
           runhub
         </div>
         
-        <section class="sign-in-section">
-            <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
-              <div><%= f.email_field :email, :class => "big-input", :placeholder => "email address" %></div>
-              
-              <div><%= f.password_field :password, :class => "big-input", :placeholder => "password" %></div>
-
-              <span><%= f.submit "Sign in", :class => "button" %></span>
-              
-              
-              <% if devise_mapping.rememberable? -%>
-                <span class="remember-me"><%= f.check_box :remember_me %> <%= f.label :remember_me %></span>
-              <% end -%>
-              
-            <% end %>
+        <section class="preview-section">
+            <div class="preview-point">
+                <%= image_tag "checkmark.png" %>
+                
+                <div class="heading">Dead Easy</div>
+                <div class="description">
+                    Straightforward features that are easy to use.
+                </div>
+            </div>
+            
+            <div class="preview-point">
+                <%= image_tag "checkmark.png" %>
+                
+                <div class="heading">Free</div>
+                <div class="description">
+                    Full access to all features, completely free.
+                </div>
+            </div>
+            
+            <div class="preview-point">
+                <%= image_tag "checkmark.png" %>
+                
+                <div class="heading">Ad Free</div>
+                <div class="description">
+                    Never get distracted by a single ad.
+                </div>
+            </div>
         </section>
     </div>
 
