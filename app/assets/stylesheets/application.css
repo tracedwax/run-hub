@@ -5,6 +5,8 @@ html {
 
 .flexbox {
   display: -webkit-box; display: -moz-box; display: box;
+  width: 800px;
+  margin: 200px auto;
 }
 
 div.run-hub-heading {
@@ -67,12 +69,16 @@ img.logo {
 }
 
 div#main-content {
-  margin: 200px auto;
+  margin-top: 200px;
+}
+
+div#site-preview-container {
+  -webkit-box-flex: 4; -moz-box-flex: 4; box-flex: 4;
+   margin-right: 100px;
 }
 
 div#sign-in-container {
-  width: 350px;
-  margin: auto;
+  -webkit-box-flex: 1; -moz-box-flex: 1; box-flex: 1;
   border: 1px solid #d4d4db;
   -moz-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px;
