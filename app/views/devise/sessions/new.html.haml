@@ -1,0 +1,34 @@
+.flexbox
+  #site-preview-container
+    .dialog-header
+      runhub
+    %section.preview-section
+      .preview-point
+        = image_tag "checkmark.png"
+        .heading Dead Easy
+        .description
+          Straightforward features that are easy to use.
+      .preview-point
+        = image_tag "checkmark.png"
+        .heading Free
+        .description
+          Full access to all features, at no cost.
+      .preview-point
+        = image_tag "checkmark.png"
+        .heading No Ads
+        .description
+          Never get distracted by a single ad.
+  #sign-in-container
+    .dialog-header
+      Sign in
+    %section.sign-in-section
+      = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
+        %div= f.email_field :email, :class => "big-input", :placeholder => "email address"
+        %div= f.password_field :password, :class => "big-input", :placeholder => "password"
+        %span= f.submit "Sign in", :class => "button"
+        - if devise_mapping.rememberable?
+          %span.remember-me
+            = f.check_box :remember_me
+            = f.label :remember_me
+%a#github{:href => "http://github.com/MichaelDrogalis/run-hub"}
+  %img{:alt => "Fork me on GitHub", :src => "https://a248.e.akamai.net/assets.github.com/img/7afbc8b248c68eb468279e8c17986ad46549fb71/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67", :style => "position: absolute; top: 0; right: 0; border: 0;"}/
