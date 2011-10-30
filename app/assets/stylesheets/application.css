@@ -23,15 +23,32 @@ div.dialog-header {
   padding-top: 10px;
   padding-left: 20px;
   text-align: left;
-
   
   -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
 
 nav.main-bar {
-  border-bottom: 1px solid #E5E5E5;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  
   background-color: #F5F5F5;
+  
+  background-image: linear-gradient(bottom, rgb(255,255,255) 27%, rgb(171,207,255) 55%);
+  background-image: -o-linear-gradient(bottom, rgb(255,255,255) 27%, rgb(171,207,255) 55%);
+  background-image: -moz-linear-gradient(bottom, rgb(255,255,255) 27%, rgb(171,207,255) 55%);
+  background-image: -webkit-linear-gradient(bottom, rgb(255,255,255) 27%, rgb(171,207,255) 55%);
+  background-image: -ms-linear-gradient(bottom, rgb(255,255,255) 27%, rgb(171,207,255) 55%);
+
+  background-image: -webkit-gradient(
+	  linear,
+	  left bottom,
+	  left top,
+  	  color-stop(0.27, rgb(255,255,255)),
+	  color-stop(0.55, rgb(171,207,255))
+  );
 }
 
 img.logo {
@@ -40,7 +57,7 @@ img.logo {
 
 div#sign-in-container {
   width: 350px;
-  margin: 50px auto;
+  margin: 200px auto;
   border: 1px solid #d4d4db;
   -moz-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px;
