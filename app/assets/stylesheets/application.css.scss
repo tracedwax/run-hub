@@ -4,6 +4,9 @@
 
 @import "css3";
 
+$gray: #F5F5F5;
+$light-blue: #ABCFFF;
+
 html {
   background-color: white;
   font: 13.34px helvetica, arial, freesans, clean, sans-serif;
@@ -15,7 +18,7 @@ nav.main-bar {
   top: 0;
   width: 100%;
 
-  @include tri-gradient(#FFFFFF, #ABCFFF, #A8CEFF, 0%, 100%, 75%, 0, 1, 0.75);
+  @include tri-gradient(#FFFFFF, $light-blue, #A8CEFF, 0%, 100%, 75%, 0, 1, 0.75);
 }
 
 div {
@@ -41,7 +44,7 @@ div {
   height: 100px;
   width: 100%;
   
-  @include custom-gradient(#ABCFFF, #FFFFFF, 48%, 100%, 0.48, 1);
+  @include custom-gradient($light-blue, #FFFFFF, 48%, 100%, 0.48, 1);
 }
 
 #copyright {
