@@ -1,0 +1,8 @@
+Listing all workouts
+
+= if user_signed_in?
+  .email
+    = current_user.email
+    
+  .sign-out
+    = link_to 'Sign out', destroy_user_session_path, :method => :delete

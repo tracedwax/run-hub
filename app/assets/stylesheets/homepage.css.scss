@@ -1,0 +1,99 @@
+@import "application.css.scss";
+
+$light-gray: #d4d4db;
+
+.flexbox {
+  @include flex-box();
+  
+  width: 800px;
+  margin: 200px auto;  
+}
+
+.dialog-header {
+  width: auto;
+  font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
+  font-size: 30px;
+  
+  text-align: left;
+  padding: 10px 0px 10px 20px;
+  
+  @include custom-gradient($gray, $light-blue, 0%, 38%, 0, 0.38);
+  @include border-radius(5px 5px 0px 0px);
+}
+
+img.logo {
+  display: block;
+  
+  margin-top: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div {
+  &#site-preview-container {
+    @include flex-box-size(4px);
+    
+    background-color: $gray;
+    margin-right: 100px;
+    border: 1px solid $light-gray;
+    
+    @include border-radius(6px);
+  }
+  
+  &.preview-point {    
+    margin: 8px 8px 0px 8px;
+    border-style: outset;
+    border-width: 2px;
+    
+    @include custom-gradient($gray, #E8E5E8, 12%, 56%, 0.12, 0.56);
+  }
+  
+  &.heading {
+    font-size: 20px;
+  }
+  
+  &.description {
+    margin-left: 37px;
+  }
+  
+  &.preview-point img {
+    float: left;
+    margin: 5px 10px 0px 8px;
+  }
+  
+  &#sign-in-container {
+    @include flex-box-size(1px);
+  
+    text-align: center;
+    color: black;
+    border: 1px solid $light-gray;
+    
+    @include border-radius(6px);
+  }
+}
+
+section.sign-in-section {
+  text-align: left;
+  background-color: $gray;
+  
+  padding: 8px 15px 15px 15px;
+  @include border-radius(0px 0px 5px 5px);
+  
+  .big-input {
+    font-size: 18px;
+    background-color: #faffbd;
+    
+    padding: 10px;
+    margin-bottom: 15px;
+    
+    @include border-radius(5px);
+    
+    &:focus {
+      outline: $yellow-focus solid 1px;
+    }
+  }
+}
+
+remember-me {
+  margin-left: 15px;
+}

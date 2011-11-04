@@ -1,0 +1,58 @@
+/*
+ *= require_tree . 
+ */
+
+@import "css3";
+
+$gray: #F5F5F5;
+$light-blue: #ABCFFF;
+$yellow-focus: #2a6db9;
+$default-button-color: #357ae8;
+
+html {
+  background-color: white;
+  font: 13.34px helvetica, arial, freesans, clean, sans-serif;
+}
+
+nav.main-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+
+  @include tri-gradient(#FFFFFF, $light-blue, #A8CEFF, 0%, 100%, 75%, 0, 1, 0.75);
+}
+
+div {
+  &#main-content {
+    margin-top: 200px;
+  }
+}
+
+.button {
+  background-color: $default-button-color;
+  color: white;
+  font-size: 16px;
+  padding: 5px 8px 5px 8px;
+  
+  @include border-radius(5px);
+}
+
+#main-footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  
+  height: 100px;
+  width: 100%;
+  
+  @include custom-gradient($light-blue, #FFFFFF, 48%, 100%, 0.48, 1);
+}
+
+#copyright {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+

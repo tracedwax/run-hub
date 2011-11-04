@@ -1,0 +1,26 @@
+!!!
+
+%html
+  %head
+    %title RunHub
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  
+  %body
+    %nav.main-bar
+      = image_tag "runhub-logo.png", :class => "logo"
+
+    = alert
+    = notice
+    
+    #main-content
+      = yield
+    
+    #main-footer
+      #copyright
+        %small
+          Copyright 2011 Michael Drogalis under MIT
+          .tech
+            Built with Ruby on Rails 3.1
+        
