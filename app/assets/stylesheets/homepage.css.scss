@@ -24,6 +24,7 @@
   background-image: -ms-linear-gradient(bottom, #f5f5f5 0%, #abcfff 38%);
   background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #f5f5f5), color-stop(0.38, #abcfff));
   
+  @include custom-gradient(#F5F5F5, #ABCFFF, 0%, 38%, 0, 0.38);
   @include border-radius(5px 5px 0px 0px);
 }
 

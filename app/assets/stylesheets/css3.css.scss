@@ -12,6 +12,15 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$top}', endColorstr='#{$bottom}');
 }
 
+@mixin custom-gradient($top, $bottom, $top-percent, $bottom-percent, $top-decimal, $bottom-decimal) {
+    background-image: linear-gradient(bottom, $top $top-percent, $bottom $bottom-percent);
+    background-image: -o-linear-gradient(bottom, $top $top-percent, $bottom $bottom-percent);
+    background-image: -moz-linear-gradient(bottom, $top $top-percent, $bottom $bottom-percent);
+    background-image: -webkit-linear-gradient(bottom, $top $top-percent, $bottom $bottom-percent);
+    background-image: -ms-linear-gradient(bottom, $top $top-percent, $bottom $bottom-percent);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop($top-decimal, $top), color-stop($bottom-decimal, $bottom));
+}
+
 
 @mixin box-shadow($args) {
     box-shadow: $args;
