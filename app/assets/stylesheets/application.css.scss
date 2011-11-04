@@ -46,12 +46,7 @@ div {
   height: 100px;
   width: 100%;
   
-  background-image: linear-gradient(bottom, #abcfff 48%, white 100%);
-  background-image: -o-linear-gradient(bottom, #abcfff 48%, white 100%);
-  background-image: -moz-linear-gradient(bottom, #abcfff 48%, white 100%);
-  background-image: -webkit-linear-gradient(bottom, #abcfff 48%, white 100%);
-  background-image: -ms-linear-gradient(bottom, #abcfff 48%, white 100%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.48, #abcfff), color-stop(1, white));
+  @include custom-gradient(#ABCFFF, #FFFFFF, 48%, 100%, 0.48, 1);
 }
 
 #copyright {
