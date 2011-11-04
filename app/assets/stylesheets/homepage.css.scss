@@ -61,9 +61,7 @@ div {
   }
   
   &#sign-in-container {
-    -webkit-box-flex: 1;
-    -moz-box-flex: 1;
-    box-flex: 1;
+    @include flex-box-size(1px);
   
     text-align: center;
     color: black;
