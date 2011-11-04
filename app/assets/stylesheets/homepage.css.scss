@@ -88,7 +88,7 @@ section.sign-in-section {
     @include border-radius(5px);
     
     &:focus {
-      outline: #2a6db9 solid 1px;
+      outline: $yellow-focus solid 1px;
     }
   }
 }
