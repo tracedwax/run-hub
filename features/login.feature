@@ -13,3 +13,8 @@ Feature: Log in to RunHub
     Given I am on the sign in page
     When I log in to RunHub with incorrect credentials
     Then I see a login error message
+
+  Scenario: User tries to access workouts page without logging in
+    Given I am not logged in
+    When I go to the workouts page
+    Then I should be on the sign in page
