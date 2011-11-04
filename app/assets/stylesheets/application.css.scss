@@ -14,13 +14,8 @@ nav.main-bar {
   left: 0;
   top: 0;
   width: 100%;
-  
-  background-image: linear-gradient(bottom, white 0%, #abcfff 100%, #a8ceff 75%);
-  background-image: -o-linear-gradient(bottom, white 0%, #abcfff 100%, #a8ceff 75%);
-  background-image: -moz-linear-gradient(bottom, white 0%, #abcfff 100%, #a8ceff 75%);
-  background-image: -webkit-linear-gradient(bottom, white 0%, #abcfff 100%, #a8ceff 75%);
-  background-image: -ms-linear-gradient(bottom, white 0%, #abcfff 100%, #a8ceff 75%);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, white), color-stop(1, #abcfff), color-stop(0.75, #a8ceff));
+
+  @include tri-gradient(#FFFFFF, #ABCFFF, #A8CEFF, 0%, 100%, 75%, 0, 1, 0.75);
 }
 
 div {

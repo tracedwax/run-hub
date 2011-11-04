@@ -22,6 +22,18 @@
 }
 
 
+@mixin tri-gradient($top, $middle, $bottom, $top-percent, $middle-percent, $bottom-percent, $top-decimal, $middle-decimal, $bottom-decimal) {
+  background-image: linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+  background-image: -o-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+  background-image: -moz-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+  background-image: -webkit-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+  background-image: -ms-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop($top-decimal, $top),
+                                                                    color-stop($middle-decimal, $middle),
+                                                                    color-stop($bottom-decimal, $bottom));
+}
+
+
 @mixin box-shadow($args) {
     box-shadow: $args;
     -moz-box-shadow: $args;
