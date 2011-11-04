@@ -12,6 +12,7 @@ nav.main-bar {
   left: 0;
   top: 0;
   width: 100%;
+  
   background-image: linear-gradient(bottom, white 0%, #abcfff 100%, #a8ceff 75%);
   background-image: -o-linear-gradient(bottom, white 0%, #abcfff 100%, #a8ceff 75%);
   background-image: -moz-linear-gradient(bottom, white 0%, #abcfff 100%, #a8ceff 75%);
@@ -31,16 +32,19 @@ div {
   color: white;
   font-size: 16px;
   padding: 5px 8px 5px 8px;
+  
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
 
 #main-footer {
-  height: 100px;
   position: fixed;
   left: 0;
   bottom: 0;
+  
+  height: 100px;
   width: 100%;
+  
   background-image: linear-gradient(bottom, #abcfff 48%, white 100%);
   background-image: -o-linear-gradient(bottom, #abcfff 48%, white 100%);
   background-image: -moz-linear-gradient(bottom, #abcfff 48%, white 100%);
@@ -52,8 +56,8 @@ div {
 #copyright {
   position: absolute;
   bottom: 0;
-  text-align: center;
   width: 100%;
+  text-align: center;
 }
 
 #sign-up {
