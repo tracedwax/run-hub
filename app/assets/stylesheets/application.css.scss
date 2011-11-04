@@ -7,6 +7,7 @@
 $gray: #F5F5F5;
 $light-blue: #ABCFFF;
 $yellow-focus: #2a6db9;
+$default-button-color: #357ae8;
 
 html {
   background-color: white;
@@ -29,7 +30,7 @@ div {
 }
 
 .button {
-  background-color: #357ae8;
+  background-color: $default-button-color;
   color: white;
   font-size: 16px;
   padding: 5px 8px 5px 8px;
