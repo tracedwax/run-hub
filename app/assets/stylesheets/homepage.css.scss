@@ -1,9 +1,7 @@
 @import "application.css.scss";
 
 .flexbox {
-  display: -webkit-box;
-  display: -moz-box;
-  display: box;
+  @include flex-box();
   
   width: 800px;
   margin: 200px auto;  
@@ -31,9 +29,7 @@ img.logo {
 
 div {
   &#site-preview-container {
-    -webkit-box-flex: 4;
-    -moz-box-flex: 4;
-    box-flex: 4;
+    @include flex-box-size(4px);
     
     background-color: $gray;
     font-family: Palatino Linotype, Book Antiqua, Palatino, serif;

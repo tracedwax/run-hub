@@ -22,14 +22,26 @@
 }
 
 @mixin tri-gradient($top, $middle, $bottom, $top-percent, $middle-percent, $bottom-percent, $top-decimal, $middle-decimal, $bottom-decimal) {
-  background-image: linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
-  background-image: -o-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
-  background-image: -moz-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
-  background-image: -webkit-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
-  background-image: -ms-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop($top-decimal, $top),
+    background-image: linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+    background-image: -o-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+    background-image: -moz-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+    background-image: -webkit-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+    background-image: -ms-linear-gradient(bottom, $top $top-percent, $middle $middle-percent, $bottom $bottom-percent);
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop($top-decimal, $top),
                                                                     color-stop($middle-decimal, $middle),
                                                                     color-stop($bottom-decimal, $bottom));
+}
+
+@mixin flex-box() {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+}
+
+@mixin flex-box-size($size) {
+    -webkit-box-flex: $size;
+    -moz-box-flex: $size;
+    box-flex: $size;
 }
 
 @mixin box-shadow($args) {
