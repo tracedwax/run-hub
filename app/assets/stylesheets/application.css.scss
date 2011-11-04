@@ -35,8 +35,7 @@ div {
   font-size: 16px;
   padding: 5px 8px 5px 8px;
   
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  @include border-radius(5px);
 }
 
 #main-footer {
