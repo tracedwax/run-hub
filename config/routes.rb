@@ -1,6 +1,10 @@
 RunHub::Application.routes.draw do
   devise_for :users
-
+  
+  as :user do
+    root :to => redirect("/workouts") 
+  end
+  
   match 'workouts' => 'workouts#index'
 
   # The priority is based upon order of creation:
@@ -59,6 +63,4 @@ RunHub::Application.routes.draw do
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
   # match ':controller(/:action(/:id(.:format)))'
-
-  root :to => redirect("/workouts")
 end

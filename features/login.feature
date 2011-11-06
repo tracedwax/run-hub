@@ -4,12 +4,18 @@ Feature: Log in to RunHub
   Should log in with their credentials
 
   Scenario: Existing user successfully logs in
-    Given I am on the sign in page
+    Given I am on the home page
     And I am an existing user
     When I log in to Runhub
     Then I should be on my workouts page
 
   Scenario: User tries to log in with incorrect credentials
-    Given I am on the sign in page
+    Given I am on the home page
     When I log in to RunHub with incorrect credentials
     Then I see a login error message
+
+  Scenario: User tries to access workouts page without logging in
+    Given I am not logged in
+    When I go to the workouts page
+    Then I should be on the sign in page
+
