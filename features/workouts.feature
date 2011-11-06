@@ -11,7 +11,7 @@ Feature:
     Then I should see "You haven't logged any workouts yet."
 
   Scenario: User with one workout recorded today
-    Given I am existing user
+    Given I am an existing user
     And I am on the home page
     And I log in to Runhub
     Then I should see "You logged 1 workout this week."
