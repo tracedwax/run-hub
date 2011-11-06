@@ -8,5 +8,10 @@ Feature:
     And I am on the home page
     And I have no workouts recorded
     When I log in to Runhub
-    And I am on my workouts page
     Then I should see "You haven't logged any workouts yet."
+
+  Scenario: User with one workout recorded today
+    Given I am existing user
+    And I am on the home page
+    And I log in to Runhub
+    Then I should see "You logged 1 workout this week."
