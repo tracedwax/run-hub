@@ -12,8 +12,8 @@ Feature:
 
   Scenario: User with one workout recorded November 6, 2011
     Given I am an existing user
-    And I recorded a workout on November 6, 2011
+    And I recorded a workout on 11/6/2011
     And I am on the home page
     When I log in to Runhub
-    And I go to my workouts for the week of November 6, 2011
+    And I go to my workouts for the week of 11/6/2011
     Then I should see the workout listed
