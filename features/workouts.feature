@@ -10,8 +10,10 @@ Feature:
     When I log in to Runhub
     Then I should see "You haven't logged any workouts yet."
 
-  Scenario: User with one workout recorded today
+  Scenario: User with one workout recorded November 6, 2011
     Given I am an existing user
+    And I recorded a workout on November 6, 2011
     And I am on the home page
-    And I log in to Runhub
-    Then I should see "You logged 1 workout this week."
+    When I log in to Runhub
+    And I go to my workouts for the week of November 6, 2011
+    Then I should see the workout listed
