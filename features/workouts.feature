@@ -16,4 +16,4 @@ Feature:
     And I am on the home page
     When I log in to Runhub
     And I go to my workouts on the week of 11/6/2011
-    Then I should see the workout listed
+    Then I should see a workout for 11/6/2011 listed
