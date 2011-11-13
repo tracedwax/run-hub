@@ -9,7 +9,13 @@ end
 Then /^I should see an empty training week$/ do
   within "#workout-week" do
     (1..7).each do |day_number|
-      assert (page.has_css? ".day##{day_number}"), "Workout week did not show all 7 days."
+      assert (page.has_css? ".day##{day_number}"), "Workout week did not show day #{day_number}."
+    end
+  end
+  
+  within "#workout-week" do
+    within ".day#1" do
+      assert (page.has_content? "11/6/2011"), "Workout date did not show for day 1."
     end
   end
 end
