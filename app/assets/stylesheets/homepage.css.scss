@@ -32,25 +32,18 @@ img.logo {
 div {
   &#site-preview-container {
     @include flex-box-size(4px);
-    
-    background-color: $gray;
-    margin-right: 100px;
-    border: 1px solid $light-gray;
-    
     @include border-radius(6px);
+    margin-right: 50px;
+    color: #00032B;
   }
   
   &.preview-point {    
-    margin: 8px 8px 0px 8px;
+    margin: 8px 100px 40px 8px;
     padding: 0px 10px 0px 10px;
-    border-style: outset;
-    border-width: 2px;
-    
-    @include custom-gradient($gray, #E8E5E8, 12%, 56%, 0.12, 0.56);
   }
   
   &.heading {
-    font-size: 20px;
+    font-size: 40px;
   }
   
   &.description {
