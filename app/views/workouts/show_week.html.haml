@@ -1,3 +1,4 @@
 #workout-week
-  .day-1
-    Workout here
+  - (1..7).each do |day_number|
+    .day{ :id => day_number }
+      Workout!
