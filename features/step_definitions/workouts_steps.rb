@@ -14,9 +14,7 @@ Then /^I should see an empty training week$/ do
   end
   
   within "#workout-week" do
-    within ".day#1" do
-      assert (page.has_content? "11/6/2011"), "Workout date did not show for day 1."
-    end
+    assert (page.has_content? "11/06/2011"), "Workout date did not show for day 1."
   end
 end
 

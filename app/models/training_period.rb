@@ -26,6 +26,6 @@ class TrainingPeriod
   end
 
   def formatted_date day
-    day.strftime("%m-%d-%Y")
+    day.strftime("%m/%d/%Y")
   end
 end
