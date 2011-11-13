@@ -16,8 +16,13 @@ describe TrainingPeriod do
     period.tip_of_week.should == DateTime.new(2011, 10, 30)
   end
 
-  it "should part 11-6-2011 into a DateTime" do
+  it "should parse 11-6-2011 into a DateTime" do
     date = "11-6-2011"
     TrainingPeriod.parse_date(date).should == DateTime.new(2011, 11, 6)
+  end
+
+  it "should parse 1-2-1998 into a DateTime" do
+    date = "1-2-1998"
+    TrainingPeriod.parse_date(date).should == DateTime.new(1998, 1, 2)
   end
 end
