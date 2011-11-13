@@ -15,6 +15,12 @@ Then /^I should see an empty training week$/ do
   
   within "#workout-week" do
     assert (page.has_content? "11/06/2011"), "Workout date did not show for day 1."
+    assert (page.has_content? "11/07/2011"), "Workout date did not show for day 2."
+    assert (page.has_content? "11/08/2011"), "Workout date did not show for day 3."
+    assert (page.has_content? "11/09/2011"), "Workout date did not show for day 4."
+    assert (page.has_content? "11/10/2011"), "Workout date did not show for day 5."
+    assert (page.has_content? "11/11/2011"), "Workout date did not show for day 6."
+    assert (page.has_content? "11/12/2011"), "Workout date did not show for day 7."
   end
 end
 
