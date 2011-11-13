@@ -5,5 +5,6 @@ class WorkoutsController < ApplicationController
   end
 
   def show_week
+    @period = TrainingPeriod.new params[:startdate]
   end
 end
