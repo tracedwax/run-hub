@@ -9,7 +9,15 @@ Feature:
     And I have no workouts recorded
     When I log in to Runhub
     Then I should see "You haven't logged any workouts yet."
-
+  
+  Scenario: User with no workouts views a training period
+    Given I am an existing user
+    And I am on the home page
+    And I have no workouts recorded
+    When I log in to Runhub
+    And I go to my workouts on the week of 11/6/2011
+    Then I should see an empty training week
+  
   Scenario: User with one workout recorded November 6, 2011
     Given I am an existing user
     And I recorded a workout on 11/6/2011
