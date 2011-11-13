@@ -37,16 +37,16 @@ div {
   }
   
   &.preview-point {    
-    margin: 8px 100px 40px 8px;
+    margin: 8px 10px 0px 8px;
     padding: 0px 10px 0px 10px;
   }
   
   &.heading {
-    font-size: 40px;
+    font-size: 30px;
   }
   
   &.description {
-    margin-left: 50px;
+    margin-left: 35px;
   }
   
   &.preview-point img {
@@ -89,4 +89,10 @@ section.sign-in-section {
 
 remember-me {
   margin-left: 15px;
+}
+
+hr {
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
