@@ -1,4 +1,5 @@
 #workout-week
-  - (1..7).each do |day_number|
-    .day{ :id => day_number }
-      = @period.tip_of_week
+  - @period.each do |day|
+    .day{ :id => day[:node] }
+    = day[:date]
+
