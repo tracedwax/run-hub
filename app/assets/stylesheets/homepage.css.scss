@@ -14,7 +14,7 @@ $light-gray: #d4d4db;
   font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
   font-size: 30px;
   
-  text-align: left;
+  text-align: center;
   padding: 10px 0px 10px 20px;
   
   @include custom-gradient($gray, $light-blue, 0%, 38%, 0, 0.38);
@@ -46,7 +46,7 @@ div {
   }
   
   &.heading {
-    font-size: 30px;
+    font-size: 25px;
   }
   
   &.description {
