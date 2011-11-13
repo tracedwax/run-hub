@@ -7,7 +7,11 @@ Given /^I recorded a workout on (\d+)\/(\d+)\/(\d+)$/ do |month, day, year|
 end
 
 Then /^I should see an empty training week$/ do
-  pending # express the regexp above with the code you wish you had
+  within "#workout-week" do
+    (1..7).each do |day_number|
+      assert (page.has_css? ".day-#{day_number}"), "Workout week did not show all 7 days."
+    end
+  end
 end
 
 Then /^I should see a workout for (\d+)\/(\d+)\/(\d+) listed$/ do |month, day, year|
