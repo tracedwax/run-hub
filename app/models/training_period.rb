@@ -1,4 +1,6 @@
 class TrainingPeriod
+  include Enumerable
+  
   def initialize starting_date
     @starting_date = starting_date
   end
@@ -10,5 +12,14 @@ class TrainingPeriod
   
   def tip_of_week
     return @starting_date.time - @starting_date.time.wday
+  end
+
+  def each
+    current_day = tip_of_week
+
+    (1..7).each do |day|
+      yield current_day
+      current_day = current_day.tomorrow
+    end
   end
 end
