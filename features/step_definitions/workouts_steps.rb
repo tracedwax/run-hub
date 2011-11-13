@@ -6,6 +6,10 @@ Given /^I recorded a workout on (\d+)\/(\d+)\/(\d+)$/ do |month, day, year|
   Workout.create! :when => Time.new(year, month, day)
 end
 
+Then /^I should see an empty training week$/ do
+  pending # express the regexp above with the code you wish you had
+end
+
 Then /^I should see a workout for (\d+)\/(\d+)\/(\d+) listed$/ do |month, day, year|
   within "#workout-week" do
     assert (page.has_css? ".day-1"), "Workout week did not have Day-1 element."
