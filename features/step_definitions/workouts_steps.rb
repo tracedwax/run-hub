@@ -8,7 +8,7 @@ end
 
 Then /^I should see a workout for (\d+)\/(\d+)\/(\d+) listed$/ do |month, day, year|
   within "#workout-week" do
-    page.has_content? ".day-1"
+    assert (page.has_css? ".day-1"), "Workout week did not have Day-1 element."
   end
 end
 
