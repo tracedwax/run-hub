@@ -15,4 +15,9 @@ describe TrainingPeriod do
     period = TrainingPeriod.new DateTime.new(2011, 10, 31).in_time_zone
     period.tip_of_week.should == DateTime.new(2011, 10, 30)
   end
+
+  it "should part 11-6-2011 into a DateTime" do
+    date = "11-6-2011"
+    TrainingPeriod.parse_date(date).should == DateTime.new(2011, 11, 6)
+  end
 end
