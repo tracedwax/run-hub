@@ -31,8 +31,8 @@ img.logo {
 
 div {
   &#site-preview-container {
-    @include flex-box-size(4px);
     @include border-radius(6px);
+    margin-right: 40px;
     color: #00032B;
   }
   
@@ -55,8 +55,6 @@ div {
   }
   
   &#sign-in-container {
-    @include flex-box-size(1px);
-  
     text-align: center;
     color: black;
     border: 1px solid $light-gray;
