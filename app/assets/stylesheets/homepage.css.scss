@@ -32,6 +32,10 @@ img.logo {
 div {
   &#site-preview-container {
     @include border-radius(6px);
+    border: 1px solid $light-gray;
+    background-color: $gray;
+    padding-bottom: 10px;
+    
     margin-right: 40px;
     color: #00032B;
   }
@@ -57,17 +61,16 @@ div {
   
   &#sign-in-container {
     text-align: center;
-    color: black;
+    color: #000;
     border: 1px solid $light-gray;
-    
+    background-color: $gray;
+
     @include border-radius(6px);
   }
 }
 
 section.sign-in-section {
   text-align: left;
-  background-color: $gray;
-  
   padding: 8px 15px 15px 15px;
   @include border-radius(0px 0px 5px 5px);
   
