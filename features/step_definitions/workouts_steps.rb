@@ -6,9 +6,9 @@ Given /^I recorded a workout on (\d+)\/(\d+)\/(\d+)$/ do |month, day, year|
   Workout.create! :when => Time.new(year, month, day),
                   :category => "Easy",
                   :duration => "45:00",
-                  :distance => "5 miles",
+                  :distance => 5.0,
                   :pace => "9:00 min/mile",
-                  :route => "Mendon Ponds Pawk",
+                  :route => "Mendon Ponds Park",
                   :notes => "I felt awesome!",
                   :user_id => 1
 end
@@ -35,7 +35,7 @@ Then /^I should see a workout for 11\/6\/2011 listed$/ do
   within "#workout-week .day#1" do
     assert (page.has_content? "Easy"), "Workout type did not show."
     assert (page.has_content? "45:00"), "Workout duration did not show."
-    assert (page.has_content? "5 miles"), "Workout distance did not show."
+    assert (page.has_content? "5.0"), "Workout distance did not show."
     assert (page.has_content? "9:00 min/mile"), "Workout pace did not show."
     assert (page.has_content? "Mendon Ponds Park"), "Workout route did not show."
     assert (page.has_content? "I felt awesome!"), "Workout notes did not show."

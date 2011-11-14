@@ -5,6 +5,6 @@ class WorkoutsController < ApplicationController
   end
 
   def show_week
-    @period = TrainingPeriod.new TrainingPeriod.parse_date(params[:startdate])
+    @period = TrainingPeriod.new current_user.id, TrainingPeriod.parse_date(params[:startdate])
   end
 end

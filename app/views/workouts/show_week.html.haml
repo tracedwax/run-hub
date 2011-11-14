@@ -6,4 +6,12 @@
           = day[:week_day]
         .full-date
           = day[:formatted]
-
+        .workout
+          - if not day[:workouts].size.zero?
+            - day[:workouts].each do |workout|
+              = workout.category
+              = workout.duration
+              = workout.pace
+              = workout.distance
+              = workout.route
+              = workout.notes
