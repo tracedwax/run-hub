@@ -32,9 +32,17 @@ describe TrainingPeriod do
   end
 
   it "should find one workout for Sunday" do
-    workout = Factory(:workout, :when => DateTime.new(2011, 11, 6).in_time_zone)
+    Factory(:workout, :when => DateTime.new(2011, 11, 6).in_time_zone)
     
     period = TrainingPeriod.new DateTime.new(2011, 11, 6).in_time_zone
     period.first[:workouts].size.should == 1
+  end
+
+  it "should find two workouts for Sunday" do
+    Factory(:workout, :when => DateTime.new(2011, 11, 6).in_time_zone)
+    Factory(:workout, :when => DateTime.new(2011, 11, 6).in_time_zone)
+    
+    period = TrainingPeriod.new DateTime.new(2011, 11, 6).in_time_zone
+    period.first[:workouts].size.should == 2
   end
 end

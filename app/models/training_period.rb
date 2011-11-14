@@ -22,7 +22,7 @@ class TrainingPeriod
                    :date => current_day,
                    :formatted => formatted_date(current_day),
                    :week_day => formatted_day(current_day),
-                   :workouts => [1]
+                   :workouts => retrieve_workouts()
                  }
       yield day_info
 
@@ -36,5 +36,9 @@ class TrainingPeriod
 
   def formatted_day day
     day.strftime("%a")
+  end
+
+  def retrieve_workouts
+    Workout.all
   end
 end
