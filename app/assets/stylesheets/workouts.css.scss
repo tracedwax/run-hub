@@ -1,3 +1,28 @@
-// Place all the styles related to the Workouts controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "application.css.scss";
+
+.day {
+  background-color: #F5F5F5;
+  border-bottom: 1px solid #000;
+  min-height: 50px;
+}
+
+.period-flexbox {
+  @include flex-box();
+}
+
+section.date {
+  @include flex-box-size(0);
+  
+  background-color: #ABC;
+  width: 100px;
+  text-align: center;
+}
+
+.day-of-week {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.full-date {
+  font-size: 12px;
+}

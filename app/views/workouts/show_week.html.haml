@@ -1,0 +1,9 @@
+#workout-week
+  - @period.each do |day|
+    .day{ :class => "period-flexbox", :id => day[:node] }
+      %section.date
+        .day-of-week
+          = day[:week_day]
+        .full-date
+          = day[:formatted]
+

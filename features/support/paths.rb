@@ -17,6 +17,8 @@ module NavigationHelpers
       '/users/sign_up'
     when /^my workouts\s?page$/
       '/workouts'
+    when /^my workouts on the week of 11\/6\/2011$/
+      '/workouts/11-6-2011'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
