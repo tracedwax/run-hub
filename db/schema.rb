@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111114041708) do
+ActiveRecord::Schema.define(:version => 20111114041831) do
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(:version => 20111114041708) do
     t.string   "duration"
     t.float    "distance"
     t.string   "pace"
+    t.string   "route"
   end
 
 end
