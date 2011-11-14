@@ -1,7 +1,8 @@
 class TrainingPeriod
   include Enumerable
   
-  def initialize starting_date
+  def initialize user_id, starting_date
+    @user_id = user_id
     @starting_date = starting_date
   end
 
@@ -39,6 +40,6 @@ class TrainingPeriod
   end
 
   def retrieve_workouts
-    Workout.all
+    Workout.where :user_id => @user_id
   end
 end
