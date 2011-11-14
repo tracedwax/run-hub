@@ -3,10 +3,8 @@
 $light-gray: #d4d4db;
 
 .flexbox {
-  @include flex-box();
-  
-  width: 1000px;
-  margin: 200px auto;  
+  @include flex-box();  
+  width: 100%;
 }
 
 .dialog-header {
@@ -30,19 +28,28 @@ img.logo {
 }
 
 div {
+  &#sign-in-container {
+    text-align: center;
+    color: #000;
+    border: 1px solid $light-gray;
+    background-color: $gray;
+    margin-right: 75px;
+    padding-bottom: 20px;
+
+    @include border-radius(6px);
+  }
+  
   &#site-preview-container {
-    @include flex-box-size(4);
     @include border-radius(6px);
     border: 1px solid $light-gray;
     background-color: $gray;
-    padding-bottom: 10px;
-    
     color: #00032B;
+    margin-right: 75px;
   }
   
   &.preview-point {    
     margin: 8px 0px 0px 8px;
-    padding: 0px 10px 0px 50px;
+    padding: 0px 50px 0px 50px;
   }
   
   &.heading {
@@ -57,17 +64,6 @@ div {
   &.preview-point img {
     float: left;
     margin: 5px 10px 0px 8px;
-  }
-  
-  &#sign-in-container {
-    @include flex-box-size(1);
-    text-align: center;
-    color: #000;
-    border: 1px solid $light-gray;
-    background-color: $gray;
-    margin-left: 100px;
-
-    @include border-radius(6px);
   }
 }
 
