@@ -17,6 +17,9 @@ $light-gray: #d4d4db;
   
   @include custom-gradient($gray, $light-blue, 0%, 38%, 0, 0.38);
   @include border-radius(5px 5px 0px 0px);
+  
+      padding-left: 20px;
+    padding-right: 20px;
 }
 
 img.logo {
@@ -48,8 +51,7 @@ div {
   }
   
   &.preview-point {    
-    margin: 8px 0px 0px 8px;
-    padding: 0px 50px 0px 50px;
+    margin: 8px 0px 0px 25px;
   }
   
   &.heading {
