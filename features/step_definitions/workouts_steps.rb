@@ -24,9 +24,9 @@ Then /^I should see an empty training week$/ do
   end
 end
 
-Then /^I should see a workout for (\d+)\/(\d+)\/(\d+) listed$/ do |month, day, year|
+Then /^I should see a workout for 11\/6\/2011 listed$/ do
   within "#workout-week" do
-    assert (page.has_css? ".day#1"), "Workout week did not have Day-1 element."
+    assert (page.has_css? ".day#1"), "Workout did not turn up in the training period."
   end
 end
 
