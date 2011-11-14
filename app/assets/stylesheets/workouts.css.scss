@@ -2,7 +2,12 @@
 
 .day {
   background-color: #F5F5F5;
-  border: 1px solid #000;
+  border-bottom: 1px solid #000;
+  min-height: 50px;
+}
+
+.period-flexbox {
+  @include flex-box();
 }
 
 section.date {

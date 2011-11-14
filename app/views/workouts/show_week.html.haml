@@ -1,6 +1,6 @@
 #workout-week
   - @period.each do |day|
-    .day{ :class => "flexbox", :id => day[:node] }
+    .day{ :class => "period-flexbox", :id => day[:node] }
       %section.date
         .day-of-week
           = day[:week_day]
