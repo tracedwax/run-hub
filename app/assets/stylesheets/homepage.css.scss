@@ -5,7 +5,7 @@ $light-gray: #d4d4db;
 .flexbox {
   @include flex-box();
   
-  width: 800px;
+  width: 1000px;
   margin: 200px auto;  
 }
 
@@ -31,17 +31,17 @@ img.logo {
 
 div {
   &#site-preview-container {
+    @include flex-box-size(4);
     @include border-radius(6px);
     border: 1px solid $light-gray;
     background-color: $gray;
     padding-bottom: 10px;
     
-    margin-right: 40px;
     color: #00032B;
   }
   
   &.preview-point {    
-    margin: 8px 10px 0px 8px;
+    margin: 8px 0px 0px 8px;
     padding: 0px 10px 0px 10px;
   }
   
@@ -60,10 +60,12 @@ div {
   }
   
   &#sign-in-container {
+    @include flex-box-size(1);
     text-align: center;
     color: #000;
     border: 1px solid $light-gray;
     background-color: $gray;
+    margin-left: 100px;
 
     @include border-radius(6px);
   }
