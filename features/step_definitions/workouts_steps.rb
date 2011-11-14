@@ -25,8 +25,13 @@ Then /^I should see an empty training week$/ do
 end
 
 Then /^I should see a workout for 11\/6\/2011 listed$/ do
-  within "#workout-week" do
-    assert (page.has_css? ".day#1"), "Workout did not turn up in the training period."
+  within "#workout-week.day#1" do
+    assert (page.has_content? "Easy"), "Workout type did not show."
+    assert (page.has_content? "45:00"), "Workout duration did not show."
+    assert (page.has_content? "5 miles"), "Workout length did not show."
+    assert (page.has_content? "9:00 min/mile"), "Workout pace did not show."
+    assert (page.has_content? "Mendon Ponds Pawk"), "Workout route did not show."
+    assert (page.has_content? "I felt awesome!"), "Workout notes did not show."
   end
 end
 
