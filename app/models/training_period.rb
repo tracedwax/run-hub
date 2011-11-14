@@ -18,7 +18,7 @@ class TrainingPeriod
     current_day = tip_of_week
 
     (1..7).each do |day|
-      day_info = { :node => day, :date => current_day, :formatted => formatted_date(current_day) }
+      day_info = { :node => day, :date => current_day, :formatted => formatted_date(current_day), :week_day => formatted_day(current_day) }
       yield day_info
 
       current_day = current_day.tomorrow
@@ -27,5 +27,9 @@ class TrainingPeriod
 
   def formatted_date day
     day.strftime("%m/%d/%Y")
+  end
+
+  def formatted_day day
+    day.strftime("%a")
   end
 end
