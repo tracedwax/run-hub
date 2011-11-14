@@ -18,7 +18,12 @@ class TrainingPeriod
     current_day = tip_of_week
 
     (1..7).each do |day|
-      day_info = { :node => day, :date => current_day, :formatted => formatted_date(current_day), :week_day => formatted_day(current_day) }
+      day_info = { :node => day,
+                   :date => current_day,
+                   :formatted => formatted_date(current_day),
+                   :week_day => formatted_day(current_day),
+                   :workouts => [1]
+                 }
       yield day_info
 
       current_day = current_day.tomorrow

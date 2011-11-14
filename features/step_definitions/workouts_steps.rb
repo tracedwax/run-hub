@@ -9,8 +9,8 @@ Given /^I recorded a workout on (\d+)\/(\d+)\/(\d+)$/ do |month, day, year|
                   :distance => "5 miles",
                   :pace => "9:00 min/mile",
                   :route => "Mendon Ponds Pawk",
-                  :notes => "I felt awesome!"
-
+                  :notes => "I felt awesome!",
+                  :user_id => 1
 end
 
 Then /^I should see an empty training week$/ do
