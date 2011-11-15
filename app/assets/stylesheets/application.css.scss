@@ -23,10 +23,8 @@ nav.main-bar {
   @include tri-gradient(#FFFFFF, $light-blue, #A8CEFF, 0%, 100%, 75%, 0, 1, 0.75);
 }
 
-div {
-  &#main-content {
-    margin-top: 175px;
-  }
+#main-content {
+  margin-top: 50px;
 }
 
 .button {
