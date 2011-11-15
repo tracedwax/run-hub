@@ -9,9 +9,11 @@
       %section.workout-set
         - if not day[:workouts].size.zero?
           - day[:workouts].each do |workout|
-            = workout.category
-            = workout.duration
-            = workout.pace
-            = workout.distance
-            = workout.route
-            = workout.notes
+            %article.workout
+              = workout.when
+              = workout.category
+              = workout.duration
+              = workout.pace
+              = workout.distance
+              = workout.route
+              = workout.notes

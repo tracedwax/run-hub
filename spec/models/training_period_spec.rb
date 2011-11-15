@@ -53,4 +53,11 @@ describe TrainingPeriod do
     period = TrainingPeriod.new 1, DateTime.new(2011, 11, 6).in_time_zone
     period.first[:workouts].size.should == 1
   end
+
+  it "should retrieve my workout for 11/7/11" do
+    Factory(:workout, :when => DateTime.new(2011, 11, 7).in_time_zone)
+
+    period = TrainingPeriod.new 1, DateTime.new(2011, 11, 6).in_time_zone
+    period.to_a[1][:workouts].size.should == 1
+  end
 end

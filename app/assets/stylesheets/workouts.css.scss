@@ -28,5 +28,10 @@ section.date {
 }
 
 .workout-set {
-  @include flex-box-size(1)
+  @include flex-box-size(1);
+}
+
+article.workout {
+  background-color: #FFF;
+  border: solid 1px #000;
 }
