@@ -39,24 +39,27 @@ section.date {
 
 article.workout {
   background-color: #FFF;
-  border: solid 1px #000;
+  border: solid 1px #DDDDDD;
   width: 50%;
   margin: 0 10px 10px 10px;
 }
 
 .workout-flexbox {
   @include flex-box();
-  @include linear-gradient(#F3F8FB, #FFF);
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 3px;
+
+  background-color: #CCFFF8;
 }
 
 .workout-heading {
-  background-color: #E6F1F6;
+  background-color: #002D50;
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 2px;
+  color: #FFF;
+  font-weight: bold;
 }
 
 section.left-workout-info {
@@ -69,4 +72,6 @@ section.right-workout-info {
 
 section.workout-notes {
   @include flex-box-size(1);
+  max-width: 200px;
 }
+
