@@ -38,7 +38,20 @@ article.workout {
 
 .workout-flexbox {
   @include flex-box();
+  width: 50%;
 }
 
 header.workout-heading {
+}
+
+section.left-workout-info {
+  @include flex-box-size(1);
+}
+
+section.right-workout-info {
+  @include flex-box-size(1);
+}
+
+section.workout-notes {
+  @include flex-box-size(1);
 }

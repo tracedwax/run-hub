@@ -13,9 +13,17 @@
               .workout-heading
                 [Something here]
               .workout-flexbox
-                = workout.category
-                = workout.duration
-                = workout.pace
-                = workout.distance
-                = workout.route
-                = workout.notes
+                %section.left-workout-info
+                  .container
+                    = workout.category
+                  .container
+                    = workout.duration
+                  .container
+                    = workout.pace
+                %section.right-workout-info
+                  .container
+                    = workout.distance
+                  .container
+                    = workout.route
+                %section.workout-notes
+                  = workout.notes
