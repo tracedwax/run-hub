@@ -29,16 +29,18 @@ section.date {
 
 .workout-set {
   @include flex-box-size(1);
+  margin-bottom: 10px;
 }
 
 article.workout {
-  background-color: #FFF;
+  background-color: #F5F5F5;
   border: solid 1px #000;
+  width: 50%;
+  margin: 10px;
 }
 
 .workout-flexbox {
   @include flex-box();
-  width: 50%;
 }
 
 header.workout-heading {
