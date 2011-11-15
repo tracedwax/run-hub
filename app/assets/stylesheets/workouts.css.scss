@@ -26,3 +26,7 @@ section.date {
 .full-date {
   font-size: 12px;
 }
+
+.workout {
+  @include flex-box-size(1)
+}
