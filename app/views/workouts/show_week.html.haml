@@ -10,9 +10,12 @@
         - if not day[:workouts].size.zero?
           - day[:workouts].each do |workout|
             %article.workout
-              = workout.category
-              = workout.duration
-              = workout.pace
-              = workout.distance
-              = workout.route
-              = workout.notes
+              .workout-heading
+                [Something here]
+              .workout-flexbox
+                = workout.category
+                = workout.duration
+                = workout.pace
+                = workout.distance
+                = workout.route
+                = workout.notes

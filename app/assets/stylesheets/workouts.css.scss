@@ -35,3 +35,10 @@ article.workout {
   background-color: #FFF;
   border: solid 1px #000;
 }
+
+.workout-flexbox {
+  @include flex-box();
+}
+
+header.workout-heading {
+}
