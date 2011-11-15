@@ -1,7 +1,8 @@
 class TrainingPeriod
   include Enumerable
   
-  def initialize starting_date
+  def initialize user_id, starting_date
+    @user_id = user_id
     @starting_date = starting_date
   end
 
@@ -18,7 +19,12 @@ class TrainingPeriod
     current_day = tip_of_week
 
     (1..7).each do |day|
-      day_info = { :node => day, :date => current_day, :formatted => formatted_date(current_day), :week_day => formatted_day(current_day) }
+      day_info = { :node => day,
+                   :date => current_day,
+                   :formatted => formatted_date(current_day),
+                   :week_day => formatted_day(current_day),
+                   :workouts => retrieve_workouts()
+                 }
       yield day_info
 
       current_day = current_day.tomorrow
@@ -31,5 +37,9 @@ class TrainingPeriod
 
   def formatted_day day
     day.strftime("%a")
+  end
+
+  def retrieve_workouts
+    Workout.where :user_id => @user_id
   end
 end
