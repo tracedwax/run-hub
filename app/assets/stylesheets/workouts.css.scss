@@ -2,8 +2,11 @@
 
 .day {
   background-color: #F5F5F5;
-  border-bottom: 1px solid #000;
   min-height: 50px;
+  
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 .period-flexbox {
@@ -31,20 +34,23 @@ section.date {
 .workout-set {
   @include flex-box-size(1);
   margin-bottom: 10px;
+  margin-top: 10px;
 }
 
 article.workout {
-  background-color: #F5F5F5;
+  background-color: #FFF;
   border: solid 1px #000;
   width: 50%;
-  margin: 10px;
+  margin: 0 10px 10px 10px;
 }
 
 .workout-flexbox {
   @include flex-box();
+  @include linear-gradient(#F3F8FB, #FFF);
 }
 
-header.workout-heading {
+.workout-heading {
+  background-color: #E6F1F6;
 }
 
 section.left-workout-info {
