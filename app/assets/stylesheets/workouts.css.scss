@@ -1,6 +1,10 @@
 @import "application.css.scss";
 
 #workout-week {
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: 50%;
   margin-top: 65px;
   border-top: 1px solid #000;
 }
@@ -45,7 +49,7 @@ section.date {
 article.workout {
   background-color: #FFF;
   border: solid 1px #DDDDDD;
-  width: 50%;
+  width: 97%;
   margin: 0 10px 10px 10px;
 }
 
