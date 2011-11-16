@@ -1,5 +1,10 @@
 @import "application.css.scss";
 
+#workout-week {
+  margin-top: 65px;
+  border-top: 1px solid #000;
+}
+
 .day {
   background-color: #F5F5F5;
   min-height: 50px;
@@ -74,4 +79,3 @@ section.workout-notes {
   @include flex-box-size(1);
   max-width: 200px;
 }
-
