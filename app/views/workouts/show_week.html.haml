@@ -5,7 +5,8 @@
         .day-of-week
           = day[:week_day]
         .full-date
-          = day[:formatted]
+          %small
+            = day[:formatted]
       %section.workout-set
         - if not day[:workouts].size.zero?
           - day[:workouts].each do |workout|
