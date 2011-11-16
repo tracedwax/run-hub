@@ -20,6 +20,7 @@
 
 .period-flexbox {
   @include flex-box();
+  background-color: #FFF5EE;
 }
 
 section.date {
