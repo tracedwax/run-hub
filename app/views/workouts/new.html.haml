@@ -1,4 +1,7 @@
-= form_for :workout, :url => { :action => "create" }, :method => "post" do |f|
+= form_for @workout, :url => { :action => "create" }, :method => "post" do |f|
+  .input
+    When
+    = f.date_select :when
   .input
     Type
     = f.text_field :category
