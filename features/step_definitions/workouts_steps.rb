@@ -52,3 +52,6 @@ Then /^I should see a workout for 11\/6\/2011 listed$/ do
   end
 end
 
+Then /^I should see the hash of the workout for 11\/6\/2011$/ do
+  pending # express the regexp above with the code you wish you had
+end
