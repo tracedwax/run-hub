@@ -32,7 +32,13 @@ Then /^I should see an empty training week$/ do
 end
 
 Then /^I should see the name of each day of the week$/ do
-  pending
+  assert (page.has_content? "Sun"), "Workout week did not show Sunday"
+  assert (page.has_content? "Mon"), "Workout week did not show Monday"
+  assert (page.has_content? "Tue"), "Workout week did not show Tuesday"
+  assert (page.has_content? "Wed"), "Workout week did not show Wednesday"
+  assert (page.has_content? "Thu"), "Workout week did not show Thursday"
+  assert (page.has_content? "Fri"), "Workout week did not show Friday"
+  assert (page.has_content? "Sat"), "Workout week did not show Saturday"
 end
 
 Then /^I should see a workout for 11\/6\/2011 listed$/ do
