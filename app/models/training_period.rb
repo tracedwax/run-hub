@@ -23,7 +23,7 @@ class TrainingPeriod
                    :date => current_day,
                    :formatted => formatted_date(current_day),
                    :week_day => formatted_day(current_day),
-                   :workouts => retrieve_workouts()
+                   :workouts => retrieve_workouts(current_day)
                  }
       yield day_info
 
@@ -39,7 +39,11 @@ class TrainingPeriod
     day.strftime("%a")
   end
 
-  def retrieve_workouts
-    Workout.where :user_id => @user_id
+  def formatted_tip_of_week
+    tip_of_week.strftime("%B %d, %Y")
+  end
+
+  def retrieve_workouts day
+    Workout.where :user_id => @user_id, :when => day.in_time_zone
   end
 end
