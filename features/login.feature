@@ -8,6 +8,7 @@ Feature: Log in to RunHub
     And I am an existing user
     When I log in to Runhub
     Then I should be on my workouts page
+    And I should see my workouts for this week
 
   Scenario: User tries to log in with incorrect credentials
     Given I am on the home page
