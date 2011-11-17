@@ -32,7 +32,7 @@ Feature:
     And I have no workouts recorded
     When I log in to Runhub
     And I go to my workouts on the week of 11/6/2011
-    Then I should see "Week of November 6, 2011"
+    Then I should see "Week of November 06, 2011"
 
   Scenario: User with one workout recorded November 6, 2011
     Given I am an existing user

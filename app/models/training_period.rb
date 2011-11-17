@@ -39,6 +39,10 @@ class TrainingPeriod
     day.strftime("%a")
   end
 
+  def formatted_tip_of_week
+    tip_of_week.strftime("%B %d, %Y")
+  end
+
   def retrieve_workouts day
     Workout.where :user_id => @user_id, :when => day.in_time_zone
   end
