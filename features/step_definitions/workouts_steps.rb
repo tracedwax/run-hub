@@ -65,6 +65,8 @@ When /^I create a workout for (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
   fill_in("workout_pace", :with => "9:00 min/mile")
   fill_in("workout_route", :with => "Mendon Ponds Park")
   fill_in("workout_notes", :with => "I felt awesome!")
+
+  click_on("Create Workout")
 end
 
 Then /^I should be my workouts on the week of (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
