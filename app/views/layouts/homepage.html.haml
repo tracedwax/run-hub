@@ -9,13 +9,11 @@
   
   %body
     %nav.main-bar
-      %section.current-user
-        = current_user.email
-      = image_tag "runhub-logo-small.png", :id => "small-logo"
+      = image_tag "runhub-logo.png", :class => "logo"
 
     = alert
     = notice
     
-    #main-content
+    #homepage-main-content
       = yield
     

@@ -3,14 +3,14 @@ Given /^I have no workouts recorded$/ do
 end
 
 Given /^I recorded a workout on (\d+)\/(\d+)\/(\d+)$/ do |month, day, year|
-  Workout.create! :when => Time.new(year, month, day),
+  Workout.create! :when => DateTime.new(year.to_i, month.to_i, day.to_i),
                   :category => "Easy",
                   :duration => "45:00",
                   :distance => 5.0,
                   :pace => "9:00 min/mile",
                   :route => "Mendon Ponds Park",
                   :notes => "I felt awesome!",
-                  :user_id => 1
+                  :user_id => @user.id
 end
 
 Then /^I should see an empty training week$/ do
@@ -31,8 +31,18 @@ Then /^I should see an empty training week$/ do
   end
 end
 
+Then /^I should see the name of each day of the week$/ do
+  assert (page.has_content? "Sun"), "Workout week did not show Sunday"
+  assert (page.has_content? "Mon"), "Workout week did not show Monday"
+  assert (page.has_content? "Tue"), "Workout week did not show Tuesday"
+  assert (page.has_content? "Wed"), "Workout week did not show Wednesday"
+  assert (page.has_content? "Thu"), "Workout week did not show Thursday"
+  assert (page.has_content? "Fri"), "Workout week did not show Friday"
+  assert (page.has_content? "Sat"), "Workout week did not show Saturday"
+end
+
 Then /^I should see a workout for 11\/6\/2011 listed$/ do
-  within "#workout-week .day#1" do
+  within "#1" do
     assert (page.has_content? "Easy"), "Workout type did not show."
     assert (page.has_content? "45:00"), "Workout duration did not show."
     assert (page.has_content? "5.0"), "Workout distance did not show."

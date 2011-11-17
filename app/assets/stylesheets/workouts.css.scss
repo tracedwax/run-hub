@@ -1,13 +1,39 @@
 @import "application.css.scss";
 
+#workout-week {
+  margin-left: auto;
+  margin-right: auto;
+  
+  width: 50%;
+  margin-top: 65px;
+  border-top: 1px solid #000;
+}
+
+header.training-period-week-heading {
+  text-align: center;
+
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  background-color: #E6F1F6;
+
+  font-size: 25px;
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .day {
   background-color: #F5F5F5;
-  border-bottom: 1px solid #000;
   min-height: 50px;
+  
+  border-bottom: 1px solid #000;
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
 }
 
 .period-flexbox {
   @include flex-box();
+  background-color: #FFF5EE;
 }
 
 section.date {
@@ -21,12 +47,53 @@ section.date {
 .day-of-week {
   font-size: 20px;
   text-transform: uppercase;
+  padding-top: 10px;
 }
 
 .full-date {
   font-size: 12px;
 }
 
-.workout {
-  @include flex-box-size(1)
+.workout-set {
+  @include flex-box-size(1);
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+article.workout {
+  background-color: #FFF;
+  border: solid 1px #DDDDDD;
+  width: 96%;
+  margin: 0 10px 10px 10px;
+}
+
+.workout-flexbox {
+  @include flex-box();
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 3px;
+
+  background-color: #CCFFF8;
+}
+
+.workout-heading {
+  background-color: #002D50;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  color: #FFF;
+  font-weight: bold;
+}
+
+section.left-workout-info {
+  @include flex-box-size(1);
+}
+
+section.right-workout-info {
+  @include flex-box-size(1);
+}
+
+section.workout-notes {
+  @include flex-box-size(1);
+  max-width: 200px;
 }

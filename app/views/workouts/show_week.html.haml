@@ -1,17 +1,34 @@
 #workout-week
+  %header.training-period-week-heading
+    = "Week of "+ @period.formatted_tip_of_week.to_s
   - @period.each do |day|
     .day{ :class => "period-flexbox", :id => day[:node] }
       %section.date
         .day-of-week
           = day[:week_day]
         .full-date
-          = day[:formatted]
-        .workout
-          - if not day[:workouts].size.zero?
-            - day[:workouts].each do |workout|
-              = workout.category
-              = workout.duration
-              = workout.pace
-              = workout.distance
-              = workout.route
-              = workout.notes
+          %small
+            = day[:formatted]
+      %section.workout-set
+        - if not day[:workouts].size.zero?
+          - day[:workouts].each do |workout|
+            %article.workout
+              .workout-heading
+                [Something here]
+              .workout-flexbox
+                %section.left-workout-info
+                  .container
+                    = workout.category
+                  .container
+                    = workout.duration
+                  .container
+                    = workout.pace
+                    min/mile
+                %section.right-workout-info
+                  .container
+                    = workout.distance
+                    miles
+                  .container
+                    = workout.route
+                %section.workout-notes
+                  = workout.notes
