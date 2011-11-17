@@ -57,3 +57,18 @@ Then /^I should see the hash of the workout for 11\/6\/2011$/ do
     assert (page.has_content? "356a192b7913b04c54574d18c28d46e6395428ab"), "Workout hash did not show."
   end
 end
+
+When /^I create a workout for (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
+  fill_in("Type", :with => "Easy")
+  fill_in("Duration", :with => "45:00")
+  fill_in("Distance", :with => 5.0)
+  fill_in("Pace", :with => "9:00 min/mile")
+  fill_in("Route", :with => "Mendon Ponds Park")
+  fill_in("Notes", :with => "I felt awesome!")
+end
+
+Then /^I should be my workouts on the week of (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
+  # current_path.should == training_period_path(year, month, day)
+  current_path.should == ("/workouts/" + year + "-" + month + "-" + day)
+end
+
