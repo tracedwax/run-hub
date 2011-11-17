@@ -1,5 +1,5 @@
 Given /^I am an existing user$/ do
-  User.create!(:email => "acceptance-test-user@testing.com", :password => "long_password")
+  @user = User.create!(:email => "acceptance-test-user@testing.com", :password => "long_password")
 end
 
 When /^I log in to Runhub$/ do
@@ -21,3 +21,6 @@ Given /^I am not logged in$/ do
   # Database is clean, no one is logged in.
 end
 
+Then /^I should see my email address$/ do
+  assert (page.has_content? @user.email), "User's email address not shown after logging in"
+end
