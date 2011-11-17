@@ -1,10 +1,5 @@
-Listing all workouts
+= render "show_training_period", :locals => { :period => @period }
 
-You haven't logged any workouts yet.
-
-= if user_signed_in?
-  .email
-    = current_user.email
-    
+- if user_signed_in?
   .sign-out
     = link_to 'Sign out', destroy_user_session_path, :method => :delete

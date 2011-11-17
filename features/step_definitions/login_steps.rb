@@ -21,3 +21,13 @@ Given /^I am not logged in$/ do
   # Database is clean, no one is logged in.
 end
 
+Then /^I should see my email address$/ do
+  assert (page.has_content? @user.email), "User's email address not shown after logging in"
+end
+
+Then /^I should see my workouts for this week$/ do
+  formatted_date = TrainingPeriod.new(@user.id, DateTime.now.in_time_zone).formatted_tip_of_week
+  date_header = "Week of #{formatted_date}"
+  assert (page.has_content? date_header), "Logging in did not show workouts for this week"
+end
+

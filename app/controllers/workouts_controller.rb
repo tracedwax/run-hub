@@ -2,6 +2,7 @@ class WorkoutsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    @period = TrainingPeriod.new current_user.id, DateTime.now.in_time_zone
   end
 
   def new
