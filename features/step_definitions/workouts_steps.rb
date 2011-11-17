@@ -59,12 +59,12 @@ Then /^I should see the hash of the workout for 11\/6\/2011$/ do
 end
 
 When /^I create a workout for (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
-  fill_in("Type", :with => "Easy")
-  fill_in("Duration", :with => "45:00")
-  fill_in("Distance", :with => 5.0)
-  fill_in("Pace", :with => "9:00 min/mile")
-  fill_in("Route", :with => "Mendon Ponds Park")
-  fill_in("Notes", :with => "I felt awesome!")
+  fill_in("workout_category", :with => "Easy")
+  fill_in("workout_duration", :with => "45:00")
+  fill_in("workout_distance", :with => 5.0)
+  fill_in("workout_pace", :with => "9:00 min/mile")
+  fill_in("workout_route", :with => "Mendon Ponds Park")
+  fill_in("workout_notes", :with => "I felt awesome!")
 end
 
 Then /^I should be my workouts on the week of (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
