@@ -78,3 +78,7 @@ Then /^I should be my workouts on the week of (\d+)\/(\d+)\/(\d+)$/ do |year, mo
   current_path.should == ("/workouts/" + year + "-" + month + "-" + day)
 end
 
+Then /^I should see "([^"]*)" for each day in the training period$/ do |arg1|
+  pending # express the regexp above with the code you wish you had
+end
+
