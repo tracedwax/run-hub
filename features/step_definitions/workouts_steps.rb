@@ -59,6 +59,10 @@ Then /^I should see the hash of the workout for 11\/6\/2011$/ do
 end
 
 When /^I create a workout for (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
+  select("2011", :from => "workout_when_1i")
+  select("6", :from => "workout_when_3i")
+  select("November", :from => "workout_when_2i")
+  
   fill_in("workout_category", :with => "Easy")
   fill_in("workout_duration", :with => "45:00")
   fill_in("workout_distance", :with => 5.0)
