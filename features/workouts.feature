@@ -18,6 +18,14 @@ Feature:
     And I go to my workouts on the week of 11/6/2011
     Then I should see an empty training week
   
+  Scenario: User sees the name of each day on the training log
+    Given I am an existing user
+    And I am on the home page
+    And I have no workouts recorded
+    When I log in to Runhub
+    And I go to my workouts on the week of 11/6/2011
+    Then I should see the name of each day of the week 
+ 
   Scenario: User with one workout recorded November 6, 2011
     Given I am an existing user
     And I recorded a workout on 11/6/2011
