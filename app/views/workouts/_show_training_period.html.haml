@@ -10,6 +10,8 @@
           %small
             = day[:formatted]
       %section.workout-set
+        Add Workout
+        
         - if not day[:workouts].size.zero?
           - day[:workouts].each do |workout|
             %article.workout
