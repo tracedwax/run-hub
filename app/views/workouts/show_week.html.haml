@@ -14,7 +14,7 @@
           - day[:workouts].each do |workout|
             %article.workout
               .workout-heading
-                [Something here]
+                = "Workout " + workout.long_hash
               .workout-flexbox
                 %section.left-workout-info
                   .container

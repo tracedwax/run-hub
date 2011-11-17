@@ -52,3 +52,8 @@ Then /^I should see a workout for 11\/6\/2011 listed$/ do
   end
 end
 
+Then /^I should see the hash of the workout for 11\/6\/2011$/ do
+  within "#1" do
+    assert (page.has_content? "356a192b7913b04c54574d18c28d46e6395428ab"), "Workout hash did not show."
+  end
+end
