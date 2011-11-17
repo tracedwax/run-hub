@@ -19,3 +19,8 @@ Feature: Log in to RunHub
     When I go to the workouts page
     Then I should be on the sign in page
 
+  Scenario: User logs in and sees his email listed
+    Given I am an existing user
+    And I am on the home page
+    When I log in to Runhub
+    Then I should see my email address
