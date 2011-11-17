@@ -8,7 +8,7 @@ Feature: Register for RunHub
     And I am not yet registered
     When I register to become a member
     Then I should be on my workouts page
-    And I should see a message related to my login success
+    And I should see my email address
 
   Scenario: New user trying to register with a taken email
     Given I am on the sign up page
