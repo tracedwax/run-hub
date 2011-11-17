@@ -1,5 +1,6 @@
 #workout-week
-  = "Week of "+ @period.formatted_tip_of_week.to_s
+  %header.training-period-week-heading
+    = "Week of "+ @period.formatted_tip_of_week.to_s
   - @period.each do |day|
     .day{ :class => "period-flexbox", :id => day[:node] }
       %section.date

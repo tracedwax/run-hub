@@ -9,6 +9,19 @@
   border-top: 1px solid #000;
 }
 
+header.training-period-week-heading {
+  text-align: center;
+
+  border-left: 1px solid #000;
+  border-right: 1px solid #000;
+  background-color: #E6F1F6;
+
+  font-size: 25px;
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 .day {
   background-color: #F5F5F5;
   min-height: 50px;
