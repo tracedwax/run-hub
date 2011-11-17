@@ -1,10 +1,38 @@
-Listing all workouts
+#workout-week
+  %header.training-period-week-heading
+    = "Week of "+ @period.formatted_tip_of_week.to_s
+  - @period.each do |day|
+    .day{ :class => "period-flexbox", :id => day[:node] }
+      %section.date
+        .day-of-week
+          = day[:week_day]
+        .full-date
+          %small
+            = day[:formatted]
+      %section.workout-set
+        - if not day[:workouts].size.zero?
+          - day[:workouts].each do |workout|
+            %article.workout
+              .workout-heading
+                = "Workout " + workout.long_hash
+              .workout-flexbox
+                %section.left-workout-info
+                  .container
+                    = workout.category
+                  .container
+                    = workout.duration
+                  .container
+                    = workout.pace
+                    min/mile
+                %section.right-workout-info
+                  .container
+                    = workout.distance
+                    miles
+                  .container
+                    = workout.route
+                %section.workout-notes
+                  = workout.notes
 
-You haven't logged any workouts yet.
-
-= if user_signed_in?
-  .email
-    = current_user.email
-    
+- if user_signed_in?
   .sign-out
     = link_to 'Sign out', destroy_user_session_path, :method => :delete
