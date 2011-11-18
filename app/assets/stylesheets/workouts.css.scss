@@ -5,11 +5,13 @@
 }
 
 header.training-period-week-heading {
+  @include linear-gradient(#4C47F1, #130CFF);
+  color: #FFF;
+  
   text-align: center;
 
   border-left: 1px solid #000;
   border-right: 1px solid #000;
-  background-color: #E6F1F6;
 
   font-size: 25px;
   
