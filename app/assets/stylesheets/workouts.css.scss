@@ -4,16 +4,28 @@
   border-top: 1px solid #000;
 }
 
-#previous-period {
+#rewind {
   float: left;
   display: inline;
-  margin-left: 100px;
+  margin-left: 15px;
+}
+
+#fast-forward {
+  float: right;
+  display: inline;
+  margin-right: 15px;
+}
+
+#previous-period {
+  display: inline;
+  margin-right: 50px;
+  margin-left: 25px;
 }
 
 #next-period {
-  float: right;
   display: inline;
-  margin-right: 100px;
+  margin-left: 50px;
+  margin-right: 25px;
 }
 
 header.training-period-week-heading {
