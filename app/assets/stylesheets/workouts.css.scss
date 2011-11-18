@@ -4,6 +4,18 @@
   border-top: 1px solid #000;
 }
 
+#previous-period {
+  float: left;
+  display: inline;
+  margin-left: 100px;
+}
+
+#next-period {
+  float: right;
+  display: inline;
+  margin-right: 100px;
+}
+
 header.training-period-week-heading {
   @include linear-gradient(#4C47F1, #130CFF);
   color: #FFF;
