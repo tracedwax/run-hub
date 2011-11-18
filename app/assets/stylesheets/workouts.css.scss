@@ -112,7 +112,8 @@ section.workout-notes {
   background-color: #D4D4D4;
   margin-left: 5px;
   border: 1px solid #5A5A5A;
-  
+  text-decoration: none;
+
   @include border-radius(3px 3px 3px 3px);
 }
 

@@ -59,4 +59,6 @@ Feature:
     And I am on the home page
     When I log in to Runhub
     Then I should see "Add" for each day in the training period
-
+    And I go to my workouts on the week of 11/6/2011
+    When I click Add Workout button for 11/6/2011
+    Then I should be on the create a workout page

@@ -86,3 +86,9 @@ Then /^I should see "([^"]*)" for each day in the training period$/ do |text|
   end
 end
 
+When /^I click Add Workout button for 11\/6\/2011$/ do
+  within "#1" do
+    click_link("Add Workout")
+  end
+end
+
