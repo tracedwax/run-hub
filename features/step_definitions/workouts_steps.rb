@@ -92,3 +92,7 @@ When /^I click Add Workout button for 11\/6\/2011$/ do
   end
 end
 
+When /^I click the previous period button$/ do
+  click_link("previous-period")
+end
+

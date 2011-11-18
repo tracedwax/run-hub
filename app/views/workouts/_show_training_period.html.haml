@@ -2,7 +2,7 @@
   %header.training-period-week-heading
     #rewind
       ◄◄
-    #previous-period
+    %a#previous-period{ :href => @period.previous_tip }
       ◀
     = "Week of "+ @period.formatted_tip_of_week.to_s
 

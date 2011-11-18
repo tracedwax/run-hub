@@ -64,3 +64,11 @@ Feature:
     Then I should be on the create a workout page
     And I create a workout for 11/6/2011
     Then I should see a workout for 11/6/2011 listed
+
+  Scenario: User clicks the Previous Period button and goes back a week
+    Given I am an existing user
+    And I am on the home page
+    When I log in to Runhub
+    And I go to my workouts on the week of 11/6/2011
+    And I click the previous period button
+    Then I should see "Week of October 30, 2011"
