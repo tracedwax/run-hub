@@ -62,3 +62,5 @@ Feature:
     And I go to my workouts on the week of 11/6/2011
     When I click Add Workout button for 11/6/2011
     Then I should be on the create a workout page
+    And I create a workout for 11/6/2011
+    Then I should see a workout for 11/6/2011 listed
