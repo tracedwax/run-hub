@@ -59,7 +59,7 @@ article.workout {
   background-color: #FFF;
   border: solid 1px #DDDDDD;
   width: 96%;
-  margin: 0 10px 10px 10px;
+  margin: 5px 10px 10px 10px;
 }
 
 .workout-flexbox {
@@ -103,3 +103,20 @@ section.workout-notes {
   width: 70%;
 }
 
+.mini-button {
+  font-weight: bold;
+  font-size: 10px;
+  padding: 2px;
+  height: 21px;
+  color: #333;
+  background-color: #D4D4D4;
+  margin-left: 5px;
+  border: 1px solid #5A5A5A;
+  
+  @include border-radius(3px 3px 3px 3px);
+}
+
+.workout-controls {
+  margin-top: 5px;
+  padding-bottom: 10px;
+}
