@@ -23,7 +23,15 @@
   text-decoration: none;
 }
 
+header a:hover {
+  color: #69FF30;
+}
+
 header a:visited {
+  color: #FFF;
+}
+
+header a {
   color: #FFF;
 }
 
