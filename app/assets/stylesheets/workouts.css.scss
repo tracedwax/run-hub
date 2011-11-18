@@ -117,6 +117,15 @@ section.workout-notes {
   @include border-radius(3px 3px 3px 3px);
 }
 
+.mini-button:hover {
+  @include linear-gradient(#5994F7, #0B30FF);
+  color: #FFF;
+}
+
+.mini-button:active {
+  @include linear-gradient(#0B30FF, #5994F7);
+}
+
 .workout-controls {
   margin-top: 5px;
   padding-bottom: 10px;
