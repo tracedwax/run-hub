@@ -57,3 +57,38 @@ Then /^I should see the hash of the workout for 11\/6\/2011$/ do
     assert (page.has_content? "356a192b7913b04c54574d18c28d46e6395428ab"), "Workout hash did not show."
   end
 end
+
+When /^I create a workout for (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
+  select("2011", :from => "workout_when_1i")
+  select("6", :from => "workout_when_3i")
+  select("November", :from => "workout_when_2i")
+  
+  fill_in("workout_category", :with => "Easy")
+  fill_in("workout_duration", :with => "45:00")
+  fill_in("workout_distance", :with => 5.0)
+  fill_in("workout_pace", :with => "9:00 min/mile")
+  fill_in("workout_route", :with => "Mendon Ponds Park")
+  fill_in("workout_notes", :with => "I felt awesome!")
+
+  click_on("Create Workout")
+end
+
+Then /^I should be my workouts on the week of (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
+  # current_path.should == training_period_path(year, month, day)
+  current_path.should == ("/workouts/" + year + "-" + month + "-" + day)
+end
+
+Then /^I should see "([^"]*)" for each day in the training period$/ do |text|
+  (1..7).each do |day_number|
+    within "##{day_number}" do
+      assert (page.has_content? text), "Training period did not show #{text}"
+    end
+  end
+end
+
+When /^I click Add Workout button for 11\/6\/2011$/ do
+  within "#1" do
+    click_link("Add Workout")
+  end
+end
+

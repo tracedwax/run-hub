@@ -19,6 +19,10 @@ module NavigationHelpers
       '/workouts'
     when /^my workouts on the week of 11\/6\/2011$/
       '/workouts/11-6-2011'
+    when /^create a workout$/
+      '/workouts/new'
+    when /^the create a workout page$/
+      '/workouts/new'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

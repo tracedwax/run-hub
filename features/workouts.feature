@@ -42,3 +42,25 @@ Feature:
     When I log in to Runhub
     And I go to my workouts on the week of 11/6/2011
     Then I should see the hash of the workout for 11/6/2011
+
+  Scenario: User creates his first workout
+    Given I am an existing user
+    And I have no workouts recorded
+    And I am on the home page
+    When I log in to Runhub
+    And I go to create a workout
+    And I create a workout for 11/6/2011
+    Then I should be my workouts on the week of 11/6/2011
+    And I should see a workout for 11/6/2011 listed
+
+  Scenario: User creates a workout by clicking a button on the training period page
+    Given I am an existing user
+    And I have no workouts recorded
+    And I am on the home page
+    When I log in to Runhub
+    Then I should see "Add" for each day in the training period
+    And I go to my workouts on the week of 11/6/2011
+    When I click Add Workout button for 11/6/2011
+    Then I should be on the create a workout page
+    And I create a workout for 11/6/2011
+    Then I should see a workout for 11/6/2011 listed

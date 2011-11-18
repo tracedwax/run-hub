@@ -1,0 +1,24 @@
+= form_for @workout, :url => { :action => "create" }, :method => "post" do |f|
+  .input
+    When
+    = f.date_select :when, :order => [:month, :day, :year]
+  .input
+    Type
+    = f.text_field :category
+  .input
+    Duration
+    = f.text_field :duration
+  .input
+    Distance
+    = f.text_field :distance
+  .input
+    Pace
+    = f.text_field :pace
+  .input
+    Route
+    = f.text_field :route
+  .input
+    Notes
+    = f.text_area :notes
+
+  = f.submit "Create Workout"
