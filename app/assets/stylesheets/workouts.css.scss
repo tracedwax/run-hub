@@ -4,24 +4,6 @@
   border-top: 1px solid #000;
 }
 
-#rewind {
-  float: left;
-  display: inline;
-  margin-left: 15px;
-}
-
-#fast-forward {
-  float: right;
-  display: inline;
-  margin-right: 15px;
-}
-
-#previous-period {
-  display: inline;
-  margin-right: 50px;
-  margin-left: 25px;
-}
-
 header a:hover {
   color: #69FF30;
 }
@@ -29,12 +11,6 @@ header a:hover {
 header a {
   color: #FFF;
   text-decoration: none;
-}
-
-#next-period {
-  display: inline;
-  margin-left: 50px;
-  margin-right: 25px;
 }
 
 header.training-period-week-heading {
@@ -50,6 +26,18 @@ header.training-period-week-heading {
   
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+#previous-period {
+  display: inline;
+  margin-right: 50px;
+  margin-left: 25px;
+}
+
+#next-period {
+  display: inline;
+  margin-left: 50px;
+  margin-right: 25px;
 }
 
 .day {
