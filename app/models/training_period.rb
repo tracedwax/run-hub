@@ -12,11 +12,15 @@ class TrainingPeriod
   end
   
   def tip_of_week
-    return @starting_date.time - @starting_date.time.wday
+    @starting_date.time - @starting_date.time.wday
   end
   
   def previous_tip
-    return (tip_of_week - 1.week).strftime("%m-%d-%Y")
+    (tip_of_week - 1.week).strftime("%m-%d-%Y")
+  end
+
+  def next_tip
+    (tip_of_week + 1.week).strftime("%m-%d-%Y")
   end
   
   def each

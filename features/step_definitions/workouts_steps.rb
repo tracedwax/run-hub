@@ -96,3 +96,7 @@ When /^I click the previous period button$/ do
   click_link("previous-period")
 end
 
+When /^I click the next period button$/ do
+  click_link("next-period")
+end
+
