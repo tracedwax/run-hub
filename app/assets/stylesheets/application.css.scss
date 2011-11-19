@@ -62,3 +62,12 @@ nav.main-bar {
   margin-left: 250px;
   margin-top: 10px;
 }
+
+.sign-out {
+  display: inline;
+  font-weight: bold;
+
+  a {
+    text-decoration: none;
+  }
+}

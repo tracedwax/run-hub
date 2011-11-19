@@ -12,6 +12,9 @@
       %section.current-user
         - if user_signed_in?
           = current_user.email
+
+          .sign-out
+            = link_to 'Sign out', destroy_user_session_path, :method => :delete
       = image_tag "runhub-logo-small.png", :id => "small-logo"
 
     = alert
@@ -19,7 +22,4 @@
     
     #main-content
       = yield
-    
-- if user_signed_in?
-  .sign-out
-    = link_to 'Sign out', destroy_user_session_path, :method => :delete
+
