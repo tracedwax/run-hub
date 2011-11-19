@@ -72,3 +72,11 @@ Feature:
     And I go to my workouts on the week of 11/6/2011
     And I click the previous period button
     Then I should see "Week of October 30, 2011"
+
+  Scenario: User clicks the Next Period button and goes forward a week
+    Given I am an existing user
+    And I am on the home page
+    When I log in to Runhub
+    And I go to my workouts on the week of 11/6/2011
+    And I click the next period button
+    Then I should see "Week of November 13, 2011"
