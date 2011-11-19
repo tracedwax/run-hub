@@ -2,6 +2,7 @@ class WorkoutsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    @writable = true
     @period = TrainingPeriod.new current_user.id, DateTime.now.in_time_zone.midnight
   end
 
@@ -20,6 +21,7 @@ class WorkoutsController < ApplicationController
   end
 
   def show_week
+    @writable = true
     @period = TrainingPeriod.new current_user.id, TrainingPeriod.parse_date(params[:startdate])
   end
 end
