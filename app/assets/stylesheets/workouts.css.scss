@@ -4,6 +4,15 @@
   border-top: 1px solid #000;
 }
 
+header a:hover {
+  color: #69FF30;
+}
+
+header a {
+  color: #FFF;
+  text-decoration: none;
+}
+
 header.training-period-week-heading {
   @include linear-gradient(#4C47F1, #130CFF);
   color: #FFF;
@@ -17,6 +26,18 @@ header.training-period-week-heading {
   
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+#previous-period {
+  display: inline;
+  margin-right: 50px;
+  margin-left: 25px;
+}
+
+#next-period {
+  display: inline;
+  margin-left: 50px;
+  margin-right: 25px;
 }
 
 .day {
