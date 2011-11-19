@@ -6,7 +6,7 @@ RunHub::Application.routes.draw do
   end
   
   match 'workouts' => 'workouts#index'
-  match 'workouts/new' => 'workouts#new'
+  match 'workouts/new' => 'workouts#new', :as => :new_workout
   match 'workouts/create' => 'workouts#create'
   match 'workouts/:startdate' => 'workouts#show_week', :constraints => { :startdate => /\d+-\d+-\d+/ }, :as => :workout
 
