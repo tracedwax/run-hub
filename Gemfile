@@ -22,8 +22,8 @@ gem 'devise'
 # Use unicorn as the web server
 # gem 'unicorn'
 
-# Deploy with Capistrano
-# gem 'capistrano'
+# Deploy with Heroku
+gem 'heroku'
 
 # To use debugger
 gem 'ruby-debug19', :require => 'ruby-debug'
