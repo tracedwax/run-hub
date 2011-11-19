@@ -19,11 +19,11 @@ Feature: View a user's profile
     Then I should see a workout for 11/6/2011 listed
     And I should not see "Add Workout"
 
-  Scenario: Viewing the next week of my own workouts while I am logged out
+  Scenario: Viewing the previus week of my own workouts while I am logged out
     Given I am an existing user
     And I am on the home page
     And I am not logged in
     When I go to my public workouts on 11/6/2011
-    And I click the next period button
-    Then I should see "Week of November 13, 2011"
+    And I click the previous period button
+    Then I should see "Week of October 30, 2011"
     And I should not see "Add Workout"

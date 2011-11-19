@@ -1,7 +1,11 @@
 #workout-week
   %header.training-period-week-heading
-    %a#previous-period{ :href => workout_path(@period.previous_tip.to_s) }
-      ◀
+    - if @writable
+      %a#previous-period{ :href => workout_path(@period.previous_tip.to_s) }
+    - else
+      %a#previous-period{ :href => public_workouts_path(@user.id, @period.previous_tip.to_s) }
+        ◀
+    
     = "Week of "+ @period.formatted_tip_of_week.to_s
 
     %a#next-period{ :href => workout_path(@period.next_tip.to_s) }
