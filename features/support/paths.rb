@@ -25,6 +25,8 @@ module NavigationHelpers
       '/workouts/new'
     when /^my profile page$/
       '/profiles/' + @user.id.to_s
+    when /^my public workouts$/
+      '/profiles/' + @user.id.to_s + '/workouts/'
     when /^my public workouts on 11\/6\/2011$/
       '/profiles/' + @user.id.to_s + '/workouts/11-6-2011'
 
