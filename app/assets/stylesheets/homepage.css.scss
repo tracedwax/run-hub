@@ -9,7 +9,6 @@ $light-gray: #d4d4db;
 
 .dialog-header {
   width: auto;
-  font-family: Palatino Linotype, Book Antiqua, Palatino, serif;
   font-size: 30px;
   
   text-align: center;
@@ -40,6 +39,7 @@ div {
     padding-bottom: 10px;
 
     @include border-radius(6px);
+    @include box-shadow(5px 5px 5px #8F8F8F);
   }
   
   &#site-preview-container {
@@ -49,6 +49,7 @@ div {
     color: #000;
     margin-right: 75px;
     margin-left: 50px;
+    @include box-shadow(5px 5px 5px #8F8F8F);
   }
   
   &.preview-point {    
@@ -62,6 +63,7 @@ div {
   &.description {
     margin-left: 35px;
     font-style: italic;
+    font-size: 14px;
   }
   
   &.preview-point img {
