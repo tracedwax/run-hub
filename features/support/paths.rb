@@ -26,7 +26,7 @@ module NavigationHelpers
     when /^my profile page$/
       '/profiles/' + @user.id.to_s
     when /^my public workouts on 11\/6\/2011$/
-      'profiles/' + @user.id.to_s + '/11-6-2011'
+      '/profiles/' + @user.id.to_s + '/workouts/11-6-2011'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
