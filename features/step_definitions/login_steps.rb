@@ -18,7 +18,9 @@ Then /^I see a login error message$/ do
 end
 
 Given /^I am not logged in$/ do
-  # Database is clean, no one is logged in.
+  if page.has_content? "Sign out"
+    click_link "Sign out"
+  end
 end
 
 Then /^I should see my email address$/ do
