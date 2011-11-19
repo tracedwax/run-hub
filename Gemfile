@@ -26,7 +26,7 @@ gem 'devise'
 gem 'heroku'
 
 # To use debugger
-gem 'ruby-debug'
+# gem 'ruby-debug'
 
 group :development, :test do
   # Pretty printed test output
