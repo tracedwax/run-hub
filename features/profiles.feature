@@ -17,3 +17,4 @@ Feature: View a user's profile
     And I am not logged in
     When I go to my public workouts on 11/6/2011
     Then I should see a workout for 11/6/2011 listed
+    And I should not see "Add Workout"
