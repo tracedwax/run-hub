@@ -23,6 +23,8 @@ module NavigationHelpers
       '/workouts/new'
     when /^the create a workout page$/
       '/workouts/new'
+    when /^my profile page$/
+      '/profiles/' + @user.id.to_s
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
