@@ -1,5 +1,5 @@
 And /^I am not yet registered$/ do
-  User.username_exists?("acceptance-test-user").should == false
+  User.email_exists?("acceptance-test-user@testing.net").should == false
 end
 
 When /^I register to become a member$/ do
