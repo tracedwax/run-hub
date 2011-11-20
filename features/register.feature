@@ -3,6 +3,11 @@ Feature: Register for RunHub
   A runner
   Should register to become a member
 
+  Scenario: Going from the home page to the sign up page
+    Given I am on the home page
+    When I click the sign up button
+    Then I should be on the sign up page
+  
   Scenario: New user registration
     Given I am on the sign up page
     And I am not yet registered

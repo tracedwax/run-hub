@@ -19,3 +19,6 @@ Then /^I should see a message informing me of my registration failure$/ do
   page.should have_content("Email has already been taken")
 end
 
+When /^I click the sign up button$/ do
+  click_button("Create an Account")
+end
