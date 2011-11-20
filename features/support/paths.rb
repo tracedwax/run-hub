@@ -22,11 +22,11 @@ module NavigationHelpers
     when /^create a workout$/
       '/workouts/new'
     when /^my profile page$/
-      '/profiles/' + @user.id.to_s
+      '/profiles/' + @user.username
     when /^my public workouts$/
-      '/profiles/' + @user.id.to_s + '/workouts/'
+      '/profiles/' + @user.username + '/workouts/'
     when /^my public workouts on 11\/6\/2011$/
-      '/profiles/' + @user.id.to_s + '/workouts/11-6-2011'
+      '/profiles/' + @user.username + '/workouts/11-6-2011'
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
