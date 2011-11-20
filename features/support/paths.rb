@@ -21,8 +21,6 @@ module NavigationHelpers
       '/workouts/11-6-2011'
     when /^create a workout$/
       '/workouts/new'
-    when /^the create a workout page$/
-      '/workouts/new'
     when /^my profile page$/
       '/profiles/' + @user.username
     when /^my public workouts$/

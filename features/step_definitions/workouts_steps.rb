@@ -52,17 +52,39 @@ Then /^I should see a workout for 11\/6\/2011 listed$/ do
   end
 end
 
+Then /^I should see a workout for 11\/1\/2011 listed$/ do
+  within "#3" do
+    assert (page.has_content? "Easy"), "Workout type did not show."
+    assert (page.has_content? "45:00"), "Workout duration did not show."
+    assert (page.has_content? "5.0"), "Workout distance did not show."
+    assert (page.has_content? "9:00 min/mile"), "Workout pace did not show."
+    assert (page.has_content? "Mendon Ponds Park"), "Workout route did not show."
+    assert (page.has_content? "I felt awesome!"), "Workout notes did not show."
+  end
+end
+
 Then /^I should see the hash of the workout for 11\/6\/2011$/ do
   within "#1" do
     assert (page.has_content? "356a192b7913b04c54574d18c28d46e6395428ab"), "Workout hash did not show."
   end
 end
 
-When /^I create a workout for (\d+)\/(\d+)\/(\d+)$/ do |year, month, day|
+When /^I create a workout for 11\/6\/2011$/ do
   select("2011", :from => "workout_when_1i")
   select("6", :from => "workout_when_3i")
   select("November", :from => "workout_when_2i")
   
+  fill_in("workout_category", :with => "Easy")
+  fill_in("workout_duration", :with => "45:00")
+  fill_in("workout_distance", :with => 5.0)
+  fill_in("workout_pace", :with => "9:00 min/mile")
+  fill_in("workout_route", :with => "Mendon Ponds Park")
+  fill_in("workout_notes", :with => "I felt awesome!")
+
+  click_on("Create Workout")
+end
+
+When /^I create a workout for 11\/1\/2011$/ do
   fill_in("workout_category", :with => "Easy")
   fill_in("workout_duration", :with => "45:00")
   fill_in("workout_distance", :with => 5.0)
@@ -88,6 +110,12 @@ end
 
 When /^I click Add Workout button for 11\/6\/2011$/ do
   within "#1" do
+    click_link("Add Workout")
+  end
+end
+
+When /^I click Add Workout button for 11\/1\/2011$/ do
+  within "#3" do
     click_link("Add Workout")
   end
 end
