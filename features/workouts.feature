@@ -91,3 +91,4 @@ Feature:
     And I go to my workouts on the week of 11/6/2011
     And I click the next period button
     Then I should see "Week of November 13, 2011"
+
