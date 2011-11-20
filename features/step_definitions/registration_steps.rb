@@ -24,3 +24,6 @@ Then /^I should see a message informing me of my registration failure$/ do
   page.should have_content("Email has already been taken")
 end
 
+Then /^I should see a message informing me that my username is already in use$/ do
+  page.should have_content("Username has already been taken")
+end

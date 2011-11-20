@@ -20,4 +20,4 @@ Feature: Register for RunHub
     Given I am on the sign up page
     And my desired username is already taken
     When I register to become a member
-    Then I should see a message informing me of my registration failure
+    Then I should see a message informing me that my username is already in use
