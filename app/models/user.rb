@@ -5,9 +5,11 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me
+  attr_accessible :username, :email, :password, :password_confirmation, :remember_me
 
-  def self.username_exists? username
-    return (not User.find_by_username(username).nil?)
+  validates_uniqueness_of :username
+
+  def self.email_exists? email
+    return (not User.find_by_email(email).nil?)
   end
 end
