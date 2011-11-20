@@ -1,8 +1,9 @@
 And /^I am not yet registered$/ do
-  User.email_exists?("acceptance-test-user@testing.net").should == false
+  assert (not User.email_exists?("acceptance-test-user@testing.net"))
 end
 
 When /^I register to become a member$/ do
+  fill_in("user_username", :with => "acceptance-test-user")
   fill_in("user_email", :with => "acceptance-test-user@testing.com")
   fill_in("user_password", :with => "long_password")
   fill_in("user_password_confirmation", :with => "long_password")
