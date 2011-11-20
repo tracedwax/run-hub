@@ -12,6 +12,8 @@ RunHub::Application.routes.draw do
   match 'workouts/:startdate' => 'workouts#show_week', :constraints => { :startdate => /\d+-\d+-\d+/ }, :as => :workout
 
   match 'profiles/:user_id' => 'profiles#show'
+  match 'profiles/:user_id/workouts' => 'profiles#show_this_week'
+  match 'profiles/:user_id/workouts/:start_date' => 'profiles#show_week', :constraints => { :start_date => /\d+-\d+-\d+/ }, :as => :public_workouts
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
