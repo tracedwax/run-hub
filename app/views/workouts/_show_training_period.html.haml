@@ -1,11 +1,11 @@
 #workout-week
   %header.training-period-week-heading
     %a#previous-period{ :href => workout_path(@period.previous_tip.to_s) }
-      ◀
+      &#x25C0;
     = "Week of "+ @period.formatted_tip_of_week.to_s
 
     %a#next-period{ :href => workout_path(@period.next_tip.to_s) }
-      ▶
+      &#x25B6;
   - @period.each do |day|
     .day{ :class => "period-flexbox", :id => day[:node] }
       %section.date
