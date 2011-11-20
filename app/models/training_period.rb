@@ -30,6 +30,7 @@ class TrainingPeriod
       day_info = { :node => day,
                    :date => current_day,
                    :formatted => formatted_date(current_day),
+                   :dashed_formatted => dashed_date(current_day),
                    :week_day => formatted_day(current_day),
                    :workouts => retrieve_workouts(current_day)
                  }
@@ -41,6 +42,10 @@ class TrainingPeriod
 
   def formatted_date day
     day.strftime("%m/%d/%Y")
+  end
+
+  def dashed_date day
+    day.strftime("%m-%d-%Y")
   end
 
   def formatted_day day

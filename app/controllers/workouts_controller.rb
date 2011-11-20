@@ -8,6 +8,12 @@ class WorkoutsController < ApplicationController
   def new
     @workout = Workout.new
   end
+
+  def new_with_date
+    @workout = Workout.new
+    @workout_date = TrainingPeriod.parse_date params[:date]
+    render :action => "new"
+  end
   
   def create
     date = params[:workout]["when(2i)"] + "-" + params[:workout]["when(3i)"] + "-" + params[:workout]["when(1i)"]

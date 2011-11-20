@@ -61,9 +61,19 @@ Feature:
     Then I should see "Add" for each day in the training period
     And I go to my workouts on the week of 11/6/2011
     When I click Add Workout button for 11/6/2011
-    Then I should be on the create a workout page
     And I create a workout for 11/6/2011
     Then I should see a workout for 11/6/2011 listed
+
+  Scenario: User creates a workout for the previous week using the create workout button
+    Given I am an existing user
+    And I have no workouts recorded
+    And I am on the home page
+    And I log in to Runhub
+    And I go to my workouts on the week of 11/6/2011
+    And I click the previous period button
+    And I click Add Workout button for 11/1/2011
+    When I create a workout for 11/1/2011
+    Then I should see a workout for 11/1/2011 listed
 
   Scenario: User clicks the Previous Period button and goes back a week
     Given I am an existing user
@@ -80,3 +90,4 @@ Feature:
     And I go to my workouts on the week of 11/6/2011
     And I click the next period button
     Then I should see "Week of November 13, 2011"
+
