@@ -1,5 +1,5 @@
 Given /^I am an existing user$/ do
-  @user = User.create!(:email => "acceptance-test-user@testing.com", :password => "long_password")
+  @user = User.create!(:username => "acceptance-test-user", :email => "acceptance-test-user@testing.com", :password => "long_password")
 end
 
 When /^I log in to Runhub$/ do
