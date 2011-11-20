@@ -15,7 +15,7 @@
           %small
             = day[:formatted]
         .workout-controls
-          %a.mini-button{ :href => new_workout_path }
+          %a.mini-button{ :href => new_workout_with_date_path(day[:dashed_formatted]) }
             Add Workout
       %section.workout-set
         - if not day[:workouts].size.zero?
