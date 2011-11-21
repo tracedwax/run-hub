@@ -20,7 +20,8 @@ nav.main-bar {
   top: 0;
   width: 100%;
 
-  @include tri-gradient(#FFFFFF, $light-blue, #A8CEFF, 0%, 100%, 75%, 0, 1, 0.75);
+  @include linear-gradient(#A8CEFF, $light-blue);
+  border-bottom: 2px solid #FF6103;
 }
 
 #main-content {
