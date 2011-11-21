@@ -11,6 +11,8 @@
     %nav.main-bar
       %section.current-user
         - if user_signed_in?
+          = gravatar_image_tag(current_user.email, :alt => current_user.username, :height => 30)
+          
           = link_to current_user.email, profile_path(current_user.username)
 
           .sign-out
