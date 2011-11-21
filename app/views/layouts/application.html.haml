@@ -11,7 +11,7 @@
     %nav.main-bar
       %section.current-user
         - if user_signed_in?
-          = current_user.email
+          = link_to current_user.email, profile_path(current_user.username)
 
           .sign-out
             = link_to 'Sign out', destroy_user_session_path, :method => :delete

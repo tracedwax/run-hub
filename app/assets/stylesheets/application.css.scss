@@ -65,9 +65,15 @@ nav.main-bar {
 
 .sign-out {
   display: inline;
-  font-weight: bold;
+}
 
-  a {
-    text-decoration: none;
+.current-user a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #183049;
+  margin-right: 10px;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
