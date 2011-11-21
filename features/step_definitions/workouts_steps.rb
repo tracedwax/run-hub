@@ -128,3 +128,35 @@ When /^I click the next period button$/ do
   click_link("next-period")
 end
 
+Given /^I recorded a workout on 11\/6\/2011 without a distance$/ do
+    Workout.create! :when => DateTime.new(2011, 11, 6),
+                  :category => "Easy",
+                  :duration => "45:00",
+                  :pace => "9:00 min/mile",
+                  :route => "Mendon Ponds Park",
+                  :notes => "I felt awesome!",
+                  :user_id => @user.id
+end
+
+Given /^I recorded a workout on 11\/6\/2011 without a pace$/ do
+    Workout.create! :when => DateTime.new(2011, 11, 6),
+                  :category => "Easy",
+                  :duration => "45:00",
+                  :distance => 5.0,
+                  :route => "Mendon Ponds Park",
+                  :notes => "I felt awesome!",
+                  :user_id => @user.id
+end
+
+Then /^I should not see the mileage field for 11\/6\/2011$/ do
+  within "#1" do
+    assert (not page.has_content? "miles"), "Training period showed a mileage field when workout did not record mileage."
+  end
+end
+
+Then /^I should not see the pace field for 11\/6\/2011$/ do
+  within "#1" do
+    assert (not page.has_content? "min/mile"), "Training period showed a pace field when workout did not record pace."
+  end
+end
+

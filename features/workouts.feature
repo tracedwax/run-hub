@@ -90,4 +90,19 @@ Feature:
     And I go to my workouts on the week of 11/6/2011
     And I click the next period button
     Then I should see "Week of November 13, 2011"
-
+  
+  Scenario: User creates a workout with a specified distance
+    Given I am an existing user
+    And I am on the home page
+    And I log in to Runhub
+    And I recorded a workout on 11/6/2011 without a distance
+    When I go to my workouts on the week of 11/6/2011
+    Then I should not see the mileage field for 11/6/2011
+    
+  Scenario: User creates a workout with a specified pace
+    Given I am an existing user
+    And I am on the home page
+    And I log in to Runhub
+    And I recorded a workout on 11/6/2011 without a pace
+    When I go to my workouts on the week of 11/6/2011
+    Then I should not see the pace field for 11/6/2011
