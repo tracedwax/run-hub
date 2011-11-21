@@ -85,12 +85,13 @@ article.workout {
   margin: 5px 10px 10px 10px;
 }
 
-.workout-flexbox {
+.workout-flexbox { 
   @include flex-box();
   padding-left: 10px;
   padding-top: 5px;
   padding-bottom: 3px;
 
+  min-height: 23px;
   background-color: #CCFFF8;
 }
 
