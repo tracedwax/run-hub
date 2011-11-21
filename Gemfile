@@ -24,6 +24,9 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'
 
+# Gravatar
+gem 'gravatar_image_tag'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
