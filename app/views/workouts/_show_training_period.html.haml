@@ -45,8 +45,9 @@
                     min/mile
                 %section.right-workout-info
                   .container
-                    = workout.distance
-                    miles
+                    - if workout.distance
+                      = workout.distance
+                      miles
                   .container
                     = workout.route
                 %section.workout-notes
