@@ -86,7 +86,7 @@ end
 
 When /^I create a workout for 11\/1\/2011$/ do
   fill_in("workout_category", :with => "Easy")
-  fill_in("workout_duration", :with => "45:00")
+  fill_in("duration_minutes", :with => "45")
   fill_in("workout_distance", :with => 5.0)
   fill_in("workout_pace", :with => "9:00 min/mile")
   fill_in("workout_route", :with => "Mendon Ponds Park")
