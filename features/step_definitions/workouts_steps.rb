@@ -5,7 +5,7 @@ end
 Given /^I recorded a workout on (\d+)\/(\d+)\/(\d+)$/ do |month, day, year|
   Workout.create! :when => DateTime.new(year.to_i, month.to_i, day.to_i),
                   :category => "Easy",
-                  :duration => "45:00",
+                  :duration => Duration.new(:minutes => 45),
                   :distance => 5.0,
                   :pace => "9:00 min/mile",
                   :route => "Mendon Ponds Park",
