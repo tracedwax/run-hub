@@ -18,9 +18,13 @@ class WorkoutsController < ApplicationController
   
   def create
     date = params[:workout]["when(2i)"] + "-" + params[:workout]["when(3i)"] + "-" + params[:workout]["when(1i)"]
+    duration = Duration.new :hours   => params[:duration]["hours"],
+                            :minutes => params[:duration]["minutes"],
+                            :seconds => params[:duration]["seconds"]
  
     workout = Workout.create params[:workout]
     workout.user_id = current_user.id
+    workout.duration = duration
     workout.save!
 
     redirect_to :action => "show_week", :startdate => date
