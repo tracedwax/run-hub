@@ -131,7 +131,7 @@ end
 Given /^I recorded a workout on 11\/6\/2011 without a distance$/ do
     Workout.create! :when => DateTime.new(2011, 11, 6),
                   :category => "Easy",
-                  :duration => "45:00",
+                  :duration => Duration.new(:minutes => 45),
                   :pace => "9:00 min/mile",
                   :route => "Mendon Ponds Park",
                   :notes => "I felt awesome!",
@@ -141,7 +141,7 @@ end
 Given /^I recorded a workout on 11\/6\/2011 without a pace$/ do
     Workout.create! :when => DateTime.new(2011, 11, 6),
                   :category => "Easy",
-                  :duration => "45:00",
+                  :duration => Duration.new(:minutes => 45),
                   :distance => 5.0,
                   :route => "Mendon Ponds Park",
                   :notes => "I felt awesome!",
