@@ -34,9 +34,10 @@
             %article.workout
               .workout-heading
                 = "Workout " + workout.long_hash
-
-                .delete-workout
-                  = link_to "x", delete_workout_path(workout.id), :class => "delete-workout-link", :confirm => "Delete workout #{workout.long_hash}?"
+                
+                - if @writable
+                  .delete-workout
+                    = link_to "x", delete_workout_path(workout.id), :class => "delete-workout-link", :confirm => "Delete workout #{workout.long_hash}?"
               .workout-flexbox
                 %section.left-workout-info
                   .container
