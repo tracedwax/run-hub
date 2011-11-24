@@ -1,6 +1,6 @@
 When /^I delete the workout on 11\/6\/2011$/ do
   within "#1" do
-    click_link "[x]"
+    click_link "x"
   end
 end
 
