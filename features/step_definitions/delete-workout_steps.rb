@@ -21,8 +21,9 @@ end
 
 Given /^A workout has been recorded by another user$/ do
   @other_workout = Workout.create! :user_id => 2
+  @other_workout_id = @other_workout.id
 end
 
 Then /^the workout should still exist$/ do
-  pending # express the regexp above with the code you wish you had
+  assert (not Workout.find_by_id(@other_workout_id).nil?), "Users are able to delete workouts logged by other users."
 end
