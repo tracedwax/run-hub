@@ -160,3 +160,12 @@ section.workout-notes {
   float: right;
   margin-right: 10px;
 }
+
+a.delete-workout-link {
+  color: #FF0000;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
