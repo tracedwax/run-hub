@@ -34,6 +34,9 @@
             %article.workout
               .workout-heading
                 = "Workout " + workout.long_hash
+
+                .delete-workout
+                  = link_to "[x]", delete_workout_path(workout.id)
               .workout-flexbox
                 %section.left-workout-info
                   .container

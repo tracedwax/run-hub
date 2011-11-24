@@ -30,6 +30,11 @@ class WorkoutsController < ApplicationController
     redirect_to :action => "show_week", :startdate => date
   end
 
+  def destroy
+    Workout.destroy(params[:id])
+    redirect_to :back
+  end
+
   def show_week
     @writable = true
     @period = TrainingPeriod.new current_user.id, TrainingPeriod.parse_date(params[:startdate])
