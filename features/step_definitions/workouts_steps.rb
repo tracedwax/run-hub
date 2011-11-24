@@ -160,3 +160,6 @@ Then /^I should not see the pace field for 11\/6\/2011$/ do
   end
 end
 
+Then /^I should not see any delete workout links$/ do
+  assert (not page.has_css? "div.delete-workout"), "Link for deleting a workout showed in a public profile."
+end
