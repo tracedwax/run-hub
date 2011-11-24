@@ -12,3 +12,10 @@ Scenario: User with one workout deletes the workout
   When I delete the workout on 11/6/2011
   Then I should not see a workout for 11/6/2011 listed
   
+Scenario: Logged out user shouldn't be able to delete workouts on a public profile
+  Given I am an existing user
+  And I recorded a workout on 11/6/2011
+  And I am on the home page
+  And I am not logged in
+  When I go to my public workouts on 11/6/2011
+  Then I should not see any delete workout links
