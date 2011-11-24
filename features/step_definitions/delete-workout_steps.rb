@@ -15,3 +15,14 @@ Then /^I should not see a workout for 11\/6\/2011 listed$/ do
   end
 end
 
+Then /^I should not see any delete workout links$/ do
+  assert (not page.has_css? "div.delete-workout"), "Link for deleting a workout showed in a public profile."
+end
+
+Given /^A workout has been recorded by another user$/ do
+  @other_workout = Workout.create! :user_id => 2
+end
+
+Then /^the workout should still exist$/ do
+  pending # express the regexp above with the code you wish you had
+end

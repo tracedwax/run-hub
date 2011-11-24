@@ -24,6 +24,6 @@ Feature:
     Given I am an existing user
     And A workout has been recorded by another user
     And I am on the home page
-    And I am log in to Runhub
+    And I log in to Runhub
     When I go to delete the workout of the other user
     Then the workout should still exist
