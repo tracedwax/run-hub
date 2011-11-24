@@ -31,7 +31,12 @@ class WorkoutsController < ApplicationController
   end
 
   def destroy
-    Workout.destroy(params[:id])
+    workout_to_delete = Workout.find_by_id params[:id]
+
+    if workout_to_delete.user_id == current_user.id
+      Workout.destroy(params[:id])
+    end
+
     redirect_to :back
   end
 
