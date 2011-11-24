@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111114042339) do
+ActiveRecord::Schema.define(:version => 20111123211359) do
+
+  create_table "durations", :force => true do |t|
+    t.integer  "hours",      :default => 0
+    t.integer  "minutes",    :default => 0
+    t.integer  "seconds",    :default => 0
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "workout_id"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
@@ -37,7 +46,6 @@ ActiveRecord::Schema.define(:version => 20111114042339) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "category"
-    t.string   "duration"
     t.float    "distance"
     t.string   "pace"
     t.string   "route"
