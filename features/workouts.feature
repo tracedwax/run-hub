@@ -106,3 +106,12 @@ Feature:
     And I recorded a workout on 11/6/2011 without a pace
     When I go to my workouts on the week of 11/6/2011
     Then I should not see the pace field for 11/6/2011
+
+  Scenario: User checks the total mileage for a given week
+    Given I am an existing user
+    And I am on the home page
+    And I log in to Runhub
+    And I recorded a workout on 11/6/2011
+    And I recorded a workout on 11/6/2011
+    When I go to my workouts on the week of 11/6/2011
+    Then My total mileage this week should be 10
