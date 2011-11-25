@@ -22,6 +22,9 @@
     = alert
     = notice
     
-    #main-content
-      = yield
-
+    - if content_for?(:content)
+      = yield(:content)
+    - else
+      #main-content
+        = yield
+    
