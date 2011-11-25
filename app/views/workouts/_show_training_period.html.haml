@@ -1,69 +1,71 @@
-#workout-stats
-  .workout-heading#stats-heading
-    Weekly Breakdown
-  .stats-breakdown
-    %section.statistic
-      .stat-type
-        Mileage this week:
-      .stat-value
-        X miles
-
-#workout-week
-  %header.training-period-week-heading
-    - if @writable
-      %a#previous-period{ :href => workout_path(@period.previous_tip.to_s) }
-        &#x25C0;
-    - else
-      %a#previous-period{ :href => public_workouts_path(@user.username, @period.previous_tip.to_s) }
-        &#x25C0;
-    
-    = "Week of "+ @period.formatted_tip_of_week.to_s
-    
-    - if @writable
-      %a#next-period{ :href => workout_path(@period.next_tip.to_s) }
-        &#x25B6;
-    - else
-      %a#next-period{ :href => public_workouts_path(@user.username, @period.next_tip.to_s) }
-        &#x25B6;
+- content_for(:content) do
+  #workout-content
+    #workout-stats
+      .workout-heading#stats-heading
+        Weekly Breakdown
+      .stats-breakdown
+        %section.statistic
+          .stat-type
+            Mileage this week:
+          .stat-value
+            X miles
+  
+    #workout-week
+      %header.training-period-week-heading
+        - if @writable
+          %a#previous-period{ :href => workout_path(@period.previous_tip.to_s) }
+            &#x25C0;
+        - else
+          %a#previous-period{ :href => public_workouts_path(@user.username, @period.previous_tip.to_s) }
+            &#x25C0;
         
-  - @period.each do |day|
-    .day{ :class => "period-flexbox", :id => day[:node] }
-      %section.date
-        .day-of-week
-          = day[:week_day]
-        .full-date
-          %small
-            = day[:formatted]
-        .workout-controls
-          - if @writable
-            %a.mini-button{ :href => new_workout_with_date_path(day[:dashed_formatted]) }
-              Add Workout
-      %section.workout-set
-        - if not day[:workouts].size.zero?
-          - day[:workouts].each do |workout|
-            %article.workout
-              .workout-heading
-                = "Workout " + workout.long_hash
-                
-                - if @writable
-                  .delete-workout
-                    = link_to "x", delete_workout_path(workout.id), :class => "delete-workout-link", :confirm => "Delete workout #{workout.long_hash}?"
-              .workout-flexbox
-                %section.left-workout-info
-                  .container
-                    = workout.category
-                  .container
-                    = workout.duration
-                  .container
-                    - if not (workout.pace.nil? || workout.pace.empty?)
-                      = workout.pace
-                      min/mile
-                %section.right-workout-info
-                  .container
-                    - if workout.distance
-                      = workout.distance
-                      miles
-                  .container
-                    = workout.route
-                %section.workout-notes
-                  = workout.notes
+        = "Week of "+ @period.formatted_tip_of_week.to_s
+        
+        - if @writable
+          %a#next-period{ :href => workout_path(@period.next_tip.to_s) }
+            &#x25B6;
+        - else
+          %a#next-period{ :href => public_workouts_path(@user.username, @period.next_tip.to_s) }
+            &#x25B6;
+          
+      - @period.each do |day|
+        .day{ :class => "period-flexbox", :id => day[:node] }
+          %section.date
+            .day-of-week
+              = day[:week_day]
+            .full-date
+              %small
+                = day[:formatted]
+            .workout-controls
+              - if @writable
+                %a.mini-button{ :href => new_workout_with_date_path(day[:dashed_formatted]) }
+                  Add Workout
+          %section.workout-set
+            - if not day[:workouts].size.zero?
+              - day[:workouts].each do |workout|
+                %article.workout
+                  .workout-heading
+                    = "Workout " + workout.long_hash
+                    
+                    - if @writable
+                      .delete-workout
+                        = link_to "x", delete_workout_path(workout.id), :class => "delete-workout-link", :confirm => "Delete workout #{workout.long_hash}?"
+                  .workout-flexbox
+                    %section.left-workout-info
+                      .container
+                        = workout.category
+                      .container
+                        = workout.duration
+                      .container
+                        - if not (workout.pace.nil? || workout.pace.empty?)
+                          = workout.pace
+                          min/mile
+                    %section.right-workout-info
+                      .container
+                        - if workout.distance
+                          = workout.distance
+                          miles
+                      .container
+                        = workout.route
+                    %section.workout-notes
+                      = workout.notes

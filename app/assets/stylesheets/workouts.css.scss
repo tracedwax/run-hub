@@ -2,7 +2,17 @@
 
 $workout-background: #CCFFF8;
 
+#workout-content {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
 #workout-week {
+  display: inline-block;
+  float: right;
+  width: 75%;
   border-top: 1px solid #000;
 }
 
@@ -173,8 +183,9 @@ a.delete-workout-link {
 }
 
 #workout-stats {
-  width: 25%;
-  margin-left: -200px;
+  display: inline-block;
+  float: left;
+  width: 20%;
 }
 
 #stats-heading {
