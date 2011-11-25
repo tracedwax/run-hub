@@ -59,4 +59,12 @@ class TrainingPeriod
   def retrieve_workouts day
     Workout.where :user_id => @user_id, :when => day.in_time_zone
   end
+
+  def total_miles
+    self.reduce(0) do |total_miles, day|
+      total_miles + day[:workouts].reduce(0) do |daily_miles, current_workout|
+        daily_miles + current_workout.distance
+      end
+    end
+  end
 end

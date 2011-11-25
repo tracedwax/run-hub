@@ -60,4 +60,18 @@ describe TrainingPeriod do
     period = TrainingPeriod.new 1, DateTime.new(2011, 11, 6).in_time_zone
     period.to_a[1][:workouts].size.should == 1
   end
+
+  it "should calculate an empty period to have 0 total miles" do
+    period = TrainingPeriod.new 1, DateTime.new(2011, 11, 6).in_time_zone
+    period.total_miles.should == 0
+  end
+
+  it "should calculate a period with 2 workouts of 5 miles to have 10 total miles" do
+    period = TrainingPeriod.new 1, DateTime.new(2011, 11, 6).in_time_zone
+    
+    first_workout = Factory(:workout, :when => DateTime.new(2011, 11, 7).in_time_zone, :distance => 5)
+    second_workout = Factory(:workout, :when => DateTime.new(2011, 11, 7).in_time_zone, :distance => 5)
+
+    period.total_miles.should == 10
+  end
 end
