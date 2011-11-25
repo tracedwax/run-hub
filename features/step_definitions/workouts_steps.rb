@@ -160,3 +160,9 @@ Then /^I should not see the pace field for 11\/6\/2011$/ do
   end
 end
 
+Then /^My total mileage this week should be (\d+)$/ do |mileage|
+  within "#mpw" do
+    assert (page.has_content? mileage), "Training period did not show MPW."
+  end
+end
+
