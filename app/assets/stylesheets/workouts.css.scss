@@ -1,5 +1,7 @@
 @import "application.css.scss";
 
+$workout-background: #CCFFF8;
+
 #workout-week {
   border-top: 1px solid #000;
 }
@@ -92,7 +94,7 @@ article.workout {
   padding-bottom: 3px;
 
   min-height: 23px;
-  background-color: #CCFFF8;
+  background-color: $workout-background;
 }
 
 .workout-heading {
@@ -174,4 +176,27 @@ a.delete-workout-link {
   position: absolute;
   top: 65px;
   left: 50px;
+}
+
+#stats-heading {
+  text-align: center;
+  padding: 5px 0px 2px 0px;
+}
+
+.stats-breakdown {
+  background-color: $workout-background;
+  padding: 0px 10px 0px 10px;
+}
+
+section.statistic {
+  padding-top: 3px;
+}
+
+.stat-type {
+  display: inline;
+  font-weight: bold;
+}
+
+.stat-value {
+  display: inline;
 }
