@@ -63,7 +63,11 @@ class TrainingPeriod
   def total_miles
     self.reduce(0) do |total_miles, day|
       total_miles + day[:workouts].reduce(0) do |daily_miles, current_workout|
-        daily_miles + current_workout.distance
+        if current_workout.distance.nil?
+          daily_miles
+        else
+          daily_miles + current_workout.distance
+        end
       end
     end
   end
