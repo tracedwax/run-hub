@@ -9,9 +9,10 @@
   .input
     Duration
     = fields_for @workout.duration do |duration_fields|
-      Hours:
       = duration_fields.text_field :hours, :class => "duration-field", :size => 5
+      \:
       = duration_fields.text_field :minutes, :class => "duration-field", :size => 5
+      \:
       = duration_fields.text_field :seconds, :class => "duration-field", :size => 5
   .input
     Distance
