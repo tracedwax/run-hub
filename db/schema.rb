@@ -11,12 +11,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111123211359) do
+ActiveRecord::Schema.define(:version => 20111128003735) do
 
   create_table "durations", :force => true do |t|
-    t.integer  "hours",      :default => 0
-    t.integer  "minutes",    :default => 0
-    t.integer  "seconds",    :default => 0
+    t.integer  "hours"
+    t.integer  "minutes"
+    t.integer  "seconds"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "workout_id"

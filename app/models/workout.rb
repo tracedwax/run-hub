@@ -3,7 +3,7 @@ class Workout < ActiveRecord::Base
   after_initialize :init
   
   def init
-    self.duration ||= Duration.new :seconds => 0, :minutes => 0, :hours => 0
+    self.duration ||= Duration.new
   end
   
   def long_hash
