@@ -1,5 +1,5 @@
 class Duration < ActiveRecord::Base
-  belongs_to :workout
+  belongs_to :workout, :class_name => "Workout"
   
   def to_s
     if any_values_are_nil?
