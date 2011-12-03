@@ -26,6 +26,11 @@ nav.main-bar {
   border-bottom: 2px solid #ABC;
 }
 
+nav.logged-in-nav {
+  @extend nav.main-bar;
+  height: 50px;
+}
+
 #main-content {
   margin-top: 60px;
 
