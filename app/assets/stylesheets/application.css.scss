@@ -23,7 +23,7 @@ nav.main-bar {
   height: 135px;
 
   @include linear-gradient(#E9F2EE, $light-blue);
-  border-bottom: 2px solid #FF6103;
+  border-bottom: 2px solid #ABC;
 }
 
 #main-content {
@@ -68,9 +68,28 @@ nav.main-bar {
 
 .sign-out {
   display: inline;
-  font-weight: bold;
+}
 
-  a {
-    text-decoration: none;
+.current-user {
+  @include linear-gradient(#FCFCFC, #E8E8E8);
+  @include box-shadow(0 1px 1px rgba(0,0,0,0.2));
+  @include border-radius(5px);
+  
+  border: 1px solid #E9E9E9;
+  border-bottom-color: #F5F5F5;
+  margin-right: 25px;
+
+  height: 30px;
+}
+
+.current-user a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #4183C4;
+  margin-right: 10px;
+  margin-bottom: 15px;
+
+  &:hover {
+    text-decoration: underline;
   }
 }

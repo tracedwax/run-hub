@@ -5,7 +5,7 @@ end
 Given /^I recorded a workout on (\d+)\/(\d+)\/(\d+)$/ do |month, day, year|
   Workout.create! :when => DateTime.new(year.to_i, month.to_i, day.to_i),
                   :category => "Easy",
-                  :duration => "45:00",
+                  :duration => Duration.new(:minutes => 45),
                   :distance => 5.0,
                   :pace => "9:00 min/mile",
                   :route => "Mendon Ponds Park",
@@ -75,7 +75,7 @@ When /^I create a workout for 11\/6\/2011$/ do
   select("November", :from => "workout_when_2i")
   
   fill_in("workout_category", :with => "Easy")
-  fill_in("workout_duration", :with => "45:00")
+  fill_in("duration_minutes", :with => "45")
   fill_in("workout_distance", :with => 5.0)
   fill_in("workout_pace", :with => "9:00 min/mile")
   fill_in("workout_route", :with => "Mendon Ponds Park")
@@ -86,7 +86,7 @@ end
 
 When /^I create a workout for 11\/1\/2011$/ do
   fill_in("workout_category", :with => "Easy")
-  fill_in("workout_duration", :with => "45:00")
+  fill_in("duration_minutes", :with => "45")
   fill_in("workout_distance", :with => 5.0)
   fill_in("workout_pace", :with => "9:00 min/mile")
   fill_in("workout_route", :with => "Mendon Ponds Park")
@@ -126,5 +126,43 @@ end
 
 When /^I click the next period button$/ do
   click_link("next-period")
+end
+
+Given /^I recorded a workout on 11\/6\/2011 without a distance$/ do
+    Workout.create! :when => DateTime.new(2011, 11, 6),
+                  :category => "Easy",
+                  :duration => Duration.new(:minutes => 45),
+                  :pace => "9:00 min/mile",
+                  :route => "Mendon Ponds Park",
+                  :notes => "I felt awesome!",
+                  :user_id => @user.id
+end
+
+Given /^I recorded a workout on 11\/6\/2011 without a pace$/ do
+    Workout.create! :when => DateTime.new(2011, 11, 6),
+                  :category => "Easy",
+                  :duration => Duration.new(:minutes => 45),
+                  :distance => 5.0,
+                  :route => "Mendon Ponds Park",
+                  :notes => "I felt awesome!",
+                  :user_id => @user.id
+end
+
+Then /^I should not see the mileage field for 11\/6\/2011$/ do
+  within "#1" do
+    assert (not page.has_content? "miles"), "Training period showed a mileage field when workout did not record mileage."
+  end
+end
+
+Then /^I should not see the pace field for 11\/6\/2011$/ do
+  within "#1" do
+    assert (not page.has_content? "min/mile"), "Training period showed a pace field when workout did not record pace."
+  end
+end
+
+Then /^My total mileage this week should be (\d+)$/ do |mileage|
+  within "#mpw" do
+    assert (page.has_content? mileage), "Training period did not show MPW."
+  end
 end
 

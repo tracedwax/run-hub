@@ -24,6 +24,9 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'
 
+# Gravatar
+gem 'gravatar_image_tag'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -31,7 +34,7 @@ gem 'devise'
 gem 'heroku'
 
 # To use debugger
-# gem 'ruby-debug'
+# gem 'ruby-debug19'
 
 group :development, :test do
   # Pretty printed test output

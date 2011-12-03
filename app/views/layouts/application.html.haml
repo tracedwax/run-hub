@@ -11,7 +11,9 @@
     %nav.main-bar
       %section.current-user
         - if user_signed_in?
-          = current_user.email
+          = link_to gravatar_image_tag(current_user.email, :alt => current_user.username, :height => 30, :title => "Click to change your avatar"), "http://gravatar.com/emails/"
+          
+          = link_to current_user.email, profile_path(current_user.username)
 
           .sign-out
             = link_to 'Sign out', destroy_user_session_path, :method => :delete
@@ -20,6 +22,9 @@
     = alert
     = notice
     
-    #main-content
-      = yield
-
+    - if content_for?(:content)
+      = yield(:content)
+    - else
+      #main-content
+        = yield
+    

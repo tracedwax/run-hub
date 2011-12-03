@@ -1,2 +1,4 @@
-= render "show_training_period", :locals => { :period => @period }
+- content_for :content do
+  #main-content 
+    = render "show_training_period", :locals => { :period => @period }
 
