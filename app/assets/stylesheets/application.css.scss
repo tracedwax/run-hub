@@ -18,26 +18,25 @@ nav.main-bar {
   position: absolute;
   left: 0;
   top: 0;
+  
   width: 100%;
+  height: 135px;
 
-  @include tri-gradient(#FFFFFF, $light-blue, #A8CEFF, 0%, 100%, 75%, 0, 1, 0.75);
+  @include linear-gradient(#E9F2EE, $light-blue);
+  border-bottom: 2px solid #ABC;
+}
+
+nav.logged-in-nav {
+  @extend nav.main-bar;
+  height: 50px;
 }
 
 #main-content {
-  margin-top: 60px;
+  margin-top: 70px;
 
   margin-left: auto;
   margin-right: auto;
   width: 60%;
-}
-
-.button {
-  background-color: $default-button-color;
-  color: white;
-  font-size: 16px;
-  padding: 5px 8px 5px 8px;
-  
-  @include border-radius(5px);
 }
 
 #main-footer {
@@ -65,9 +64,28 @@ nav.main-bar {
 
 .sign-out {
   display: inline;
-  font-weight: bold;
+}
 
-  a {
-    text-decoration: none;
+.current-user {
+  @include linear-gradient(#FCFCFC, #E8E8E8);
+  @include box-shadow(0 1px 1px rgba(0,0,0,0.2));
+  @include border-radius(5px);
+  
+  border: 1px solid #E9E9E9;
+  border-bottom-color: #F5F5F5;
+  margin-right: 25px;
+
+  height: 30px;
+}
+
+.current-user a {
+  font-weight: bold;
+  text-decoration: none;
+  color: #4183C4;
+  margin-right: 10px;
+  margin-bottom: 15px;
+
+  &:hover {
+    text-decoration: underline;
   }
 }

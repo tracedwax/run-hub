@@ -1,6 +1,18 @@
 @import "application.css.scss";
 
+$workout-background: #CCFFF8;
+
+#workout-content {
+  margin-top: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
 #workout-week {
+  display: inline-block;
+  float: right;
+  width: 70%;
   border-top: 1px solid #000;
 }
 
@@ -92,7 +104,7 @@ article.workout {
   padding-bottom: 3px;
 
   min-height: 23px;
-  background-color: #CCFFF8;
+  background-color: $workout-background;
 }
 
 .workout-heading {
@@ -153,4 +165,48 @@ section.workout-notes {
 .workout-controls {
   margin-top: 5px;
   padding-bottom: 10px;
+}
+
+.delete-workout {
+  display: inline;
+  float: right;
+  margin-right: 10px;
+}
+
+a.delete-workout-link {
+  color: #FF0000;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#workout-stats {
+  display: inline-block;
+  float: left;
+  width: 25%;
+}
+
+#stats-heading {
+  text-align: center;
+  padding: 5px 0px 2px 0px;
+}
+
+.stats-breakdown {
+  background-color: $workout-background;
+  padding: 0px 10px 0px 10px;
+}
+
+section.statistic {
+  padding-top: 3px;
+}
+
+.stat-type {
+  display: inline;
+  font-weight: bold;
+}
+
+.stat-value {
+  display: inline;
 }

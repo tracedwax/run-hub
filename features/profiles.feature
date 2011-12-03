@@ -43,3 +43,10 @@ Feature: View a user's profile
     And I click the next period button
     Then I should see "Week of November 13, 2011"
     And I should not see "Add Workout"
+
+  Scenario: Clicking on my email address in the navigation takes me to my public profile
+    Given I am an existing user
+    And I am on the home page
+    And I log in to Runhub
+    When I follow the link for my email address in the navigation bar
+    Then I should be on my profile page
