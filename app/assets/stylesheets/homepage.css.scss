@@ -30,10 +30,11 @@ $dark-orange: #EE4000;
   font-size: 16px;
   padding: 5px 8px 5px 8px;
   
-  @include border-radius(5px);
   text-decoration: none;
-  border: 1px solid #000;
+  border: 1px solid #142d57;
   cursor: pointer;
+
+  @include border-radius(5px);
 }
 
 .homepage-button:hover {
@@ -136,6 +137,8 @@ hr {
   font-size: 20px;
   background-color: #00CE2B;
   padding: 10px;
+
+  border: 1px solid #004d10;
 }
 
 section.current-user {
