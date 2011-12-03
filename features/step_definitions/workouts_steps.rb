@@ -7,7 +7,7 @@ Given /^I recorded a workout on (\d+)\/(\d+)\/(\d+)$/ do |month, day, year|
                   :category => "Easy",
                   :duration => Duration.new(:minutes => 45),
                   :distance => 5.0,
-                  :pace => "9:00 min/mile",
+                  :pace => Duration.new(:minutes => 9),
                   :route => "Mendon Ponds Park",
                   :notes => "I felt awesome!",
                   :user_id => @user.id
@@ -77,7 +77,7 @@ When /^I create a workout for 11\/6\/2011$/ do
   fill_in("workout_category", :with => "Easy")
   fill_in("duration_minutes", :with => "45")
   fill_in("workout_distance", :with => 5.0)
-  fill_in("workout_pace", :with => "9:00 min/mile")
+  fill_in("pace_minutes", :with => "9")
   fill_in("workout_route", :with => "Mendon Ponds Park")
   fill_in("workout_notes", :with => "I felt awesome!")
 
@@ -88,7 +88,7 @@ When /^I create a workout for 11\/1\/2011$/ do
   fill_in("workout_category", :with => "Easy")
   fill_in("duration_minutes", :with => "45")
   fill_in("workout_distance", :with => 5.0)
-  fill_in("workout_pace", :with => "9:00 min/mile")
+  fill_in("pace_minutes", :with => "9")
   fill_in("workout_route", :with => "Mendon Ponds Park")
   fill_in("workout_notes", :with => "I felt awesome!")
 
@@ -132,7 +132,7 @@ Given /^I recorded a workout on 11\/6\/2011 without a distance$/ do
     Workout.create! :when => DateTime.new(2011, 11, 6),
                   :category => "Easy",
                   :duration => Duration.new(:minutes => 45),
-                  :pace => "9:00 min/mile",
+                  :pace => Duration.new(:minutes => 9),
                   :route => "Mendon Ponds Park",
                   :notes => "I felt awesome!",
                   :user_id => @user.id
