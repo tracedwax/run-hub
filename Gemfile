@@ -11,6 +11,9 @@ end
 
 gem 'sqlite3'
 
+# Used for forcing Heroku dyno to stay up.
+gem 'rufus-scheduler'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
