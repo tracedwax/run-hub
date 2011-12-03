@@ -34,15 +34,6 @@ nav.main-bar {
   width: 60%;
 }
 
-.button {
-  background-color: $default-button-color;
-  color: white;
-  font-size: 16px;
-  padding: 5px 8px 5px 8px;
-  
-  @include border-radius(5px);
-}
-
 #main-footer {
   position: fixed;
   left: 0;

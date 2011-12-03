@@ -1,6 +1,9 @@
 @import "application.css.scss";
 
-$light-gray: #d4d4db;
+$light-gray: #D4D4DB;
+$light-orange: #FBA16C;
+$dark-orange: #EE4000;
+
 
 .flexbox {
   @include flex-box();  
@@ -19,6 +22,27 @@ $light-gray: #d4d4db;
   
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.homepage-button {
+  background-color: $default-button-color;
+  color: white;
+  font-size: 16px;
+  padding: 5px 8px 5px 8px;
+  
+  @include border-radius(5px);
+  text-decoration: none;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.homepage-button:hover {
+  @include linear-gradient($light-orange, $dark-orange);
+  color: #000;
+}
+
+.homepage-button:active {
+  @include linear-gradient($dark-orange, $light-orange);
 }
 
 img.logo {
