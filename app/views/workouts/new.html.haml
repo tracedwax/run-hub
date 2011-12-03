@@ -19,7 +19,12 @@
     = f.text_field :distance
   .input
     Pace
-    = f.text_field :pace
+    = fields_for @workout.pace do |pace_fields|
+      = pace_fields.text_field :hours, :class => "pace-field", :size => 5, :name => "pace[hours]", :id => "pace_hours"
+      \:
+      = pace_fields.text_field :minutes, :class => "pace-field", :size => 5, :name => "pace[minutes]", :id => "pace_minutes"
+      \:
+      = pace_fields.text_field :seconds, :class => "pace-field", :size => 5, :name => "pace[seconds]", :id => "pace_seconds"
   .input
     Route
     = f.text_field :route

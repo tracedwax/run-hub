@@ -58,9 +58,8 @@
                       .container
                         = workout.duration
                       .container
-                        - if not (workout.pace.nil? || workout.pace.empty?)
-                          = workout.pace
-                          min/mile
+                        = workout.pace
+                        min/mile
                     %section.right-workout-info
                       .container
                         - if workout.distance

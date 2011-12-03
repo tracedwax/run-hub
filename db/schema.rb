@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111203145423) do
+ActiveRecord::Schema.define(:version => 20111203150512) do
 
   create_table "durations", :force => true do |t|
     t.integer  "hours"
@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(:version => 20111203145423) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "workout_id"
+    t.integer  "pace_id"
   end
 
   create_table "users", :force => true do |t|
