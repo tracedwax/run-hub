@@ -3,7 +3,7 @@
 $light-gray: #D4D4DB;
 $light-orange: #FBA16C;
 $dark-orange: #EE4000;
-
+$sign-up-button-color-darker: #63B347;
 
 .flexbox {
   @include flex-box();  
@@ -134,8 +134,9 @@ hr {
 }
 
 #sign-up-button {
+  background-color: $sign-up-button-color-darker;
+  
   font-size: 20px;
-  background-color: #00CE2B;
   padding: 10px;
 }
 
