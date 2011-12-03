@@ -7,7 +7,11 @@ class Duration < ActiveRecord::Base
       if all_values_are_nil?
         ""
       else
-        Time.new(2011, 11, 6, hours, minutes, seconds).strftime("%H:%M:%S")
+        if (not self.hours.nil?) && (self.hours > 0)
+          Time.new(2011, 11, 6, hours, minutes, seconds).strftime("%H:%M:%S")
+        else
+          Time.new(2011, 11, 6, hours, minutes, seconds).strftime("%M:%S")
+        end
       end
     else
       if self.hours > 0
