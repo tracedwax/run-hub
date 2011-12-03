@@ -31,7 +31,7 @@ $dark-orange: #EE4000;
   padding: 5px 8px 5px 8px;
   
   text-decoration: none;
-  border: 1px solid #142d57;
+  border: 0px solid;
   cursor: pointer;
 
   @include border-radius(5px);
@@ -137,8 +137,6 @@ hr {
   font-size: 20px;
   background-color: #00CE2B;
   padding: 10px;
-
-  border: 1px solid #004d10;
 }
 
 section.current-user {
