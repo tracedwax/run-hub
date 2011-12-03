@@ -68,12 +68,14 @@ div {
   
   &#site-preview-container {
     @include border-radius(6px);
+    @include box-shadow(5px 5px 5px #8F8F8F);
+    
     border: 1px solid $light-gray;
     background-color: $gray;
     color: #000;
     margin-right: 75px;
     margin-left: 50px;
-    @include box-shadow(5px 5px 5px #8F8F8F);
+    padding-bottom: 15px;
   }
   
   &.preview-point {    
@@ -132,8 +134,8 @@ hr {
 
 #sign-up-button {
   font-size: 20px;
+  background-color: #00CE2B;
   padding: 10px;
-  background-color: #00CE2B
 }
 
 section.current-user {
