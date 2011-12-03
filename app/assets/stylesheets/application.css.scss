@@ -18,7 +18,9 @@ nav.main-bar {
   position: absolute;
   left: 0;
   top: 0;
+  
   width: 100%;
+  height: 135px;
 
   @include linear-gradient(#E9F2EE, $light-blue);
   border-bottom: 2px solid #FF6103;
