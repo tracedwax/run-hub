@@ -8,7 +8,7 @@
     = csrf_meta_tags
   
   %body
-    %nav.main-bar
+    %nav.logged-in-nav
       %section.current-user
         - if user_signed_in?
           = link_to gravatar_image_tag(current_user.email, :alt => current_user.username, :height => 30, :title => "Click to change your avatar"), "http://gravatar.com/emails/"

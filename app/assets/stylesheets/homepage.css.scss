@@ -1,6 +1,9 @@
 @import "application.css.scss";
 
-$light-gray: #d4d4db;
+$light-gray: #D4D4DB;
+$light-orange: #FBA16C;
+$dark-orange: #EE4000;
+
 
 .flexbox {
   @include flex-box();  
@@ -19,6 +22,28 @@ $light-gray: #d4d4db;
   
   padding-left: 20px;
   padding-right: 20px;
+}
+
+.homepage-button {
+  background-color: $default-button-color;
+  color: white;
+  font-size: 16px;
+  padding: 5px 8px 5px 8px;
+  
+  text-decoration: none;
+  border: 1px solid #142d57;
+  cursor: pointer;
+
+  @include border-radius(5px);
+}
+
+.homepage-button:hover {
+  @include linear-gradient($light-orange, $dark-orange);
+  color: #000;
+}
+
+.homepage-button:active {
+  @include linear-gradient($dark-orange, $light-orange);
 }
 
 img.logo {
@@ -44,12 +69,14 @@ div {
   
   &#site-preview-container {
     @include border-radius(6px);
+    @include box-shadow(5px 5px 5px #8F8F8F);
+    
     border: 1px solid $light-gray;
     background-color: $gray;
     color: #000;
     margin-right: 75px;
     margin-left: 50px;
-    @include box-shadow(5px 5px 5px #8F8F8F);
+    padding-bottom: 15px;
   }
   
   &.preview-point {    
@@ -108,8 +135,10 @@ hr {
 
 #sign-up-button {
   font-size: 20px;
+  background-color: #00CE2B;
   padding: 10px;
-  background-color: #00CE2B
+
+  border: 1px solid #004d10;
 }
 
 section.current-user {
