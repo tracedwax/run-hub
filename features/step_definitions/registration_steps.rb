@@ -25,7 +25,7 @@ Then /^I should see a message informing me of my registration failure$/ do
 end
 
 When /^I click the sign up button$/ do
-  click_button("Create an Account")
+  click_link("Create an Account")
 end
 
 Then /^I should see a message informing me that my username is already in use$/ do
