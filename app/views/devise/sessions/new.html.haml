@@ -1,3 +1,27 @@
+#fb-root
+%script{:src => "http://connect.facebook.net/en_US/all.js"}
+:javascript
+  window.fbAsyncInit = function() {
+    FB._https = window.location.protocol == "https:";
+    FB.init({appId: "319094718102433", cookie:true, status:true, xfbml:true});
+    FB.Canvas.setAutoResize(false);
+    FB.Canvas.setSize({ "width": 760, "height": 700 });
+  };
+
+  (function() {
+    var e = document.createElement('script');
+    e.src = document.location.protocol + '//connect.facebook.net/en_US/all.js';
+    e.async = true;
+    document.getElementById('fb-root').appendChild(e);
+  }());
+
+  function login(args)
+  {
+    var uid = args[2][0]['session']['uid']
+    var access_token = args[2][0]['session']['access_token']
+    window.location = '/?uid=' + uid + '&fbtoken=' + access_token;
+  }
+
 .flexbox
   #site-preview-container
     .dialog-header
@@ -38,7 +62,9 @@
           %span.remember-me
             = f.check_box :remember_me
             = f.label :remember_me
-    
+        %fb:login-button{"on-login" => "login(arguments)", :perms => "offline_access,email,user_about_me,user_birthday"} Login with Facebook
+
+
     = link_to "Create an Account", new_user_registration_path, :method => "get", :class => "homepage-button", :id => "sign-up-button"
 
 %a#github{:href => "http://github.com/MichaelDrogalis/run-hub"}

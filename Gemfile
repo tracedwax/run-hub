@@ -27,6 +27,12 @@ gem 'jquery-rails'
 gem 'haml-rails'
 gem 'devise'
 
+# Settingslogic for Facebook auth
+#gem "settingslogic"
+
+# Koala for fb auth
+gem 'koala'
+
 # Gravatar
 gem 'gravatar_image_tag'
 
@@ -51,10 +57,10 @@ group :development, :test do
   gem 'ZenTest'
   gem 'webrat'
 
-  gem 'cucumber-rails'
+  #gem 'cucumber-rails'
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl'
-  gem 'cucumber-websteps'
+  #gem 'cucumber-websteps'
 end
 

@@ -1,0 +1,22 @@
+# app/config/application.yml
+
+development: &development
+  facebook:
+    app_id: 319094718102433
+    app_secret: 4c5bc1438aa2c525a5d58e79f5fab0ea
+
+staging: &staging
+  facebook:
+    app_id: 319094718102433
+    app_secret: 4c5bc1438aa2c525a5d58e79f5fab0ea
+
+production: &production
+  facebook:
+    app_id: 319094718102433
+    app_secret: 4c5bc1438aa2c525a5d58e79f5fab0ea
+
+test:
+  <<: *staging
+
+cucumber:
+  <<: *staging
